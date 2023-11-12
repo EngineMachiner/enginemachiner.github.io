@@ -2,12 +2,14 @@ import { langData } from "@/app/lang"
 import Image from "next/image"
 import { promises as fs } from 'fs'
 import BodyParser from "@/app/components/BodyParser"
+import { randomUntil, titleFont } from "@/app/util"
+import EmojiParticles from "@/app/components/particles/Emoji"
 
 async function getArt() {
 
     // 3 files.
-    const index = Math.floor( Math.random() * 2 ) + 1
-    const path = process.cwd() + '/data/' + 'asciiArt/' + index + '.txt'
+    const name = randomUntil(2) + 1
+    const path = process.cwd() + '/data/' + 'asciiArt/' + name + '.txt'
     const file = await fs.readFile( path, 'utf8' )
 
     return file
@@ -46,14 +48,16 @@ export default async function About() {
                     
                     <div className='h-full textBox'>
 
-                        <h1 className='text-center'>{title1}</h1>
-                        <BodyParser className='inline aboutText' body={body}/>
+                        <h1 className={ titleFont.className + ' text-center' }>{title1}</h1>
+                        <BodyParser className='inline-block aboutText' body={body}/>
                     
                     </div>
 
                 </div>
 
             </div>
+
+            <EmojiParticles/>
             
         </div>
 

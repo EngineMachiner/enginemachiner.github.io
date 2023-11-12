@@ -2,35 +2,41 @@
 import { langData } from "../lang"
 import HoverText from "./HoverText"
 
-function get( className: string, p: string ) {
+function push( elements: any[], element: JSX.Element ) {
 
-    const elements = [];        let s = ""
+    const { props: { children } } = element;        if ( children.length == 0 ) return
 
-    const keywords = langData.keywords;     let split = p.split(" ")
+    elements.push(element)
+
+}
+
+function get( className: string, line: string ) {
+
+    const elements = [];        const keywords = langData.keywords;
+    
+    let split = line.split(" ")
 
     for ( const i in split ) {
 
-        s += split[i] + ' '
+        const isLast = i == ( split.length - 1 ).toString()
+
+        const s = split[i] + ' ';     let isKeyword = false
 
         for ( const key2 in keywords ) {
     
-            if ( s.indexOf(key2) != -1 ) {
+            isKeyword = false;      const emojis = langData.keywords[key2]
 
-                let sub = s.substring( 0, s.indexOf(key2) )
+            if ( s.indexOf(key2) == -1 ) continue;
 
-                elements.push( <p className={className}>{sub}</p> )
+            elements.push( <HoverText className={ className + " text-lime-400" } text={s} emojis={emojis}/> )
 
-                elements.push( <HoverText className={ className + " text-orange-500" } text={key2}/> )
-
-                sub = s.substring( s.indexOf(key2), s.length ).replace( key2, '' )
-
-                elements.push( <p className={className}>{sub}</p> )
-
-                s = "";     break
-
-            }
+            isKeyword = true;   break
     
         }
+
+        if ( !isKeyword ) push( elements, <p className={className}>{s}</p> )
+
+        if (isLast) elements.push( <br className="break"/> )
 
     }
 
@@ -46,7 +52,7 @@ export default function BodyParser( element:{ className: string, body: string[] 
 
     for ( const key1 in body ) {
 
-        let p = body[key1];     elements.push( get( className, p ) )
+        let line = body[key1];     elements.push( get( className, line ) )
 
     }
 

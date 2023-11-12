@@ -1,7 +1,7 @@
 {
 
     "metatitle": "My website",
-    "title1": "Welcome to my webpage",
+    "title1": "Welcome to my webpage!",
     "body1": "Hello, my name is Manuel and I like to develop software.",
     "body2": "I enjoy art, design and creativity. I love music and I like to play music from time to time.",
     "body3": "I also like playing videogames. Specially rhythm games.",
@@ -18,4 +18,5 @@
         "movies": [ "🎥", "🎞️", "📽️", "🎬", "🎦", "🍿" ],
         "Spanish": "🇨🇴",    "English": "🇺🇸"
     }
+    
 }

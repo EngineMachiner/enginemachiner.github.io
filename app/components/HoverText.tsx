@@ -1,23 +1,47 @@
 'use client'
 
-function onMouseEnter() {
-    console.log("A")
+import { randomUntil, randomValue } from "../util";
+import { emojiOptions, getEmojiContainer } from "./particles/Emoji"
+
+function onMouseEnter(emojis: any) {
+
+    const container = getEmojiContainer()
+
+    const width = window.innerWidth;    const size = 16
+
+    const num = 10
+    let i = 0;  while ( i <= num ) {
+
+        let x = Math.floor( Math.random() * width )
+        x = Math.max( size, x );        x = Math.min( x, width - size )
+
+        const options = {
+            rotate: {},
+            shape: { type: 'char',  character: [ { value: randomValue(emojis) } ] }
+        }
+
+        //if ( randomUntil(1) == 0 ) options.rotate = {  }
+
+        setTimeout( () => {
+            container?.particles.addParticle( { x: x,   y: window.innerHeight }, options )
+        }, i * 100 )
+        
+        i++
+
+    }
+    
+
 }
 
-function onMouseLeave() {
-    console.log("B")
-}
+export default function HoverText( element: any ) {
 
-export default function HoverText( element: { className: string, text: string } ) {
+    const { className, text, emojis } = element
 
-    const { className, text } = element
-
-    return ( 
+    return (
         <p 
-            className={className}
-            onMouseEnter={onMouseEnter} 
-            onMouseLeave={onMouseLeave}
-        >{text}</p> 
+            className={ className + ' transition-colors hover:text-cyan-400' }
+            onMouseEnter={ () => onMouseEnter(emojis) }
+        >{text}</p>
     )
 
 }
