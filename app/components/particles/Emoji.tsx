@@ -3,9 +3,9 @@
 import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
-import { Container, Engine } from "tsparticles-engine";
+import { Container, Engine, IParticlesOptions } from "tsparticles-engine";
 
-export const emojiOptions = {
+const emojiOptions: IParticlesOptions = {
 
     particles: {
 

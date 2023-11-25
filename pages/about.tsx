@@ -2,7 +2,7 @@ import { langData } from "@/app/lang"
 import Image from "next/image"
 import { promises as fs } from 'fs'
 import BodyParser from "@/app/components/BodyParser"
-import { randomUntil, titleFont } from "@/app/util"
+import { bodyFont, randomUntil, titleFont } from "@/app/util"
 import EmojiParticles from "@/app/components/particles/Emoji"
 
 async function getArt() {
@@ -48,8 +48,10 @@ export default async function About() {
                     
                     <div className='h-full textBox'>
 
+                        <pre className='asciiArtMobile text-center'>{ await getArt() }</pre>
+
                         <h1 className={ titleFont.className + ' text-center' }>{title1}</h1>
-                        <BodyParser className='inline-block aboutText' body={body}/>
+                        <BodyParser className={ bodyFont.className + ' inline-block aboutText' } body={body}/>
                     
                     </div>
 

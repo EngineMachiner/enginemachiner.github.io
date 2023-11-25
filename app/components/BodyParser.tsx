@@ -36,7 +36,7 @@ function get( className: string, line: string ) {
 
         if ( !isKeyword ) push( elements, <p className={className}>{s}</p> )
 
-        if (isLast) elements.push( <br className="break"/> )
+        if (isLast) elements.push( <p className="break"/> )
 
     }
 

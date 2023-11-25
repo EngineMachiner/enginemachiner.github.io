@@ -1,8 +1,16 @@
 
 import localFont from "next/font/local"
 
+export const isMobile = () => {
+    return window.matchMedia( "screen and (min-width: 360px) and (orientation: portrait)" ).matches
+}
+
 export const titleFont = localFont( {
     src: '../fonts/LoftygoalsRegular-9Y5Xy.otf'
+} )
+
+export const bodyFont = localFont( {
+    src: '../fonts/NotoSerif-Regular.ttf'
 } )
 
 export function randomUntil( n2: number ) { return Math.floor( Math.random() * n2 ) }
