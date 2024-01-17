@@ -1,5 +1,17 @@
 {
     "metatitle": "Mi sitio web",
     "title1": "¡Bievenido a mi página!",
-    "body1": "Hola, me llamo Manuel y me gusta el desarrollo software."
+    "body1": "Hola, mi nombre es Manuel, soy colombiano y me gusta el desarrollo de software.",
+    "body2": "Aprecio el arte, el diseño y la creatividad. Me encanta la musica y me gusta tocar o interpretar canciones frecuentemente.",
+    "body3": "Tambien me interesan los videojuegos. Especialmente los juegos de ritmo.",
+    "body4": "Me agrada nadar y de vez en cuando ver peliculas o series.",
+    "body5": "Habló Inglés y Español.",
+    "body6": "Me gusta aprender, soy comprometido, determinado, automono y recursivo.",
+    "body7": "Quiero cumplir metas personales y profesionales buscando nuevas experiencias.",
+    "keywords": {
+        "Hola": "wave.png",         "colombiano": "flag-co.png",
+        "software": "software",     "arte, el diseño y la creatividad": "art",
+        "musica": "music",     "videojuegos": "videogames",   "nadar": "sport",
+        "peliculas": "movies",    "Español": "es.png",      "Inglés": "us.png"
+    }
 }

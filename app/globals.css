@@ -59,7 +59,14 @@ p { font-size: 2.5vh }
 
 .aboutText { white-space: pre }
 
-.break { margin-bottom: 10px }
+.break { margin-bottom: 5px }
+
+.langButton {
+    right: 0;               left: auto;
+    position: absolute;     margin: 0.5rem;
+    padding: 0.5rem;        background-color: #1dc159;
+    border-radius: 0.5rem;  color: #04491d
+}
 
 @media screen and (min-width: 360px) and (orientation: portrait) {
 

@@ -1,61 +1,77 @@
 
-import { langData } from "../lang"
 import HoverText from "./HoverText"
+import { LanguageData, LanguageInterface } from "./language/Language";
+import { EmojiInterface } from "./particles/Emoji";
 
-function push( elements: any[], element: JSX.Element ) {
+let keywords: LanguageData;     let emojis: EmojiInterface
 
-    const { props: { children } } = element;        if ( children.length == 0 ) return
+function getKeywordEmojis(key: string) {
 
-    elements.push(element)
+    const value = keywords[key];        const path = '/emojis/' + value
 
-}
+    if ( value.endsWith(".png") ) return [path]; else {
 
-function get( className: string, line: string ) {
+        const data = emojis[value];     const parsed: string[] = []
 
-    const elements = [];        const keywords = langData.keywords;
-    
-    let split = line.split(" ")
+        for ( const i in data ) parsed[i] = path + '/' + data[i]
 
-    for ( const i in split ) {
-
-        const isLast = i == ( split.length - 1 ).toString()
-
-        const s = split[i] + ' ';     let isKeyword = false
-
-        for ( const key2 in keywords ) {
-    
-            isKeyword = false;      const emojis = langData.keywords[key2]
-
-            if ( s.indexOf(key2) == -1 ) continue;
-
-            elements.push( <HoverText className={ className + " text-lime-400" } text={s} emojis={emojis}/> )
-
-            isKeyword = true;   break
-    
-        }
-
-        if ( !isKeyword ) push( elements, <p className={className}>{s}</p> )
-
-        if (isLast) elements.push( <p className="break"/> )
+        return parsed
 
     }
 
-    return elements
+}
+
+function getChild( className: string, sentence: string ) {
+
+    const children = [];    let words = sentence.split(" ")
+    
+    let i = 0;    const last = words[ words.length - 1 ]
+
+    for ( const word of words ) {
+
+        const isLast = word == last
+
+        const text = word + ' ';     let isKeyword = false
+
+        for ( const key in keywords ) {
+    
+            isKeyword = text.includes(key);   if ( !isKeyword ) continue
+
+            const emojis = getKeywordEmojis(key)
+
+            const child = <HoverText className={ className + " text-lime-400" } text={text} emojis={emojis} key={ i++ }/>
+
+            children.push(child);   isKeyword = true;   break
+    
+        }
+
+        if ( !isKeyword ) children.push( <p className={className} key={ i++ }>{text}</p> )
+
+        if (isLast) children.push( <p className="break" key={ i++ }/> )
+
+    }
+
+    return children
 
 }
 
 // Parse keywords that on hover pop emoji particles.
 
-export default function BodyParser( element:{ className: string, body: string[] } ) {
+interface Props { 
+    className: string;      body: string[];
+    language: LanguageInterface;     emojiImages: EmojiInterface
+}
 
-    const { className, body } = element;        const elements = []
+export default function BodyParser( props: Props ) {
 
-    for ( const key1 in body ) {
+    const children = []
+    
+    const { className, body, language, emojiImages } = props
 
-        let line = body[key1];     elements.push( get( className, line ) )
+    keywords = language.data?.keywords;     emojis = emojiImages
 
-    }
+    for ( const sentence of body ) children.push( getChild( className, sentence ) )
 
-    return elements
+    return children
     
 }

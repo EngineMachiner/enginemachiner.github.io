@@ -1,11 +1,11 @@
 'use client'
 
-import { useCallback } from "react";
-import Particles from "react-particles";
-import { loadFull } from "tsparticles";
-import { Container, Engine, IParticlesOptions } from "tsparticles-engine";
+import Particles from "@tsparticles/react";
+import { Container, ISourceOptions } from "@tsparticles/engine";
 
-const emojiOptions: IParticlesOptions = {
+export interface EmojiInterface { [ key: string ]: string[] }
+
+const emojiOptions: ISourceOptions = {
 
     particles: {
 
@@ -16,31 +16,18 @@ const emojiOptions: IParticlesOptions = {
             outModes: "destroy"
         },
 
-        shape: {
-            type: 'char',
-            character: [ { value: ['-'] } ]
-        },
-
-        size: { value: { min: 15, max: 35 } },
-
     }
 
 }
 
-let emojiContainer: Container | undefined = undefined
+let emojiContainer: Container | undefined
 
 export function getEmojiContainer() { return emojiContainer }
 
 export default function EmojiParticles() {
 
-    const init = useCallback( async ( engine: Engine ) => { await loadFull(engine) }, [] )
+    const particlesLoaded = async ( container?: Container ) => { emojiContainer = container }
 
-    const loaded = useCallback( async ( container: Container | undefined ) => {
-        
-        emojiContainer = container
-
-    }, [] )
-
-    return <Particles id="emojiParticles" init={init} loaded={loaded} options={emojiOptions}/>
+    return <Particles id="emojiParticles" particlesLoaded={particlesLoaded} options={emojiOptions}/>
 
 }
