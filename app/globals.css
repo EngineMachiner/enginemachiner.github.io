@@ -3,23 +3,26 @@
 @tailwind utilities;
 
 :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
-}
-
-@media ( prefers-color-scheme: dark ) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
-    }
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
 }
 
 body { color: rgb( var( --foreground-rgb ) ); }
 
 h1 { font-size: 6vh;    padding: 3vh 0 }
 p { font-size: 2.5vh }
+
+.bgCreditsBox {
+    margin-left: 20px;  position: absolute;
+    top: auto;          bottom: 2.5vh;
+}
+
+.bgCredits {
+    height: fit-content;
+    font-size: 2.15vh;          display: inline;   
+    white-space: pre-wrap
+}
 
 .main { background-color: '#000' }
 
@@ -33,6 +36,7 @@ p { font-size: 2.5vh }
     height: var( --height );
 
     --top: calc( calc( 100% - var( --height ) ) * 0.5 );
+    
     top: var( --top );
 
 }
@@ -63,12 +67,14 @@ p { font-size: 2.5vh }
 
 .langButton {
     right: 0;               left: auto;
-    position: absolute;     margin: 0.5rem;
-    padding: 0.5rem;        background-color: #1dc159;
-    border-radius: 0.5rem;  color: #04491d
+    position: absolute;     margin: 1.5vh;
+    width: 4.5vh;           height: 4.75vh;
+    border-radius: 1.5vh;   color: #04491d;
+    font-size: 2.25vh;      font-weight: bold;
+    background-color: #1dc159;
 }
 
-@media screen and (min-width: 360px) and (orientation: portrait) {
+@media (orientation: portrait) {
 
     .main, .imageContainer { height: 400vh }
     .textBox { padding: 0 3vh;  margin-right: 0 }
@@ -80,5 +86,16 @@ p { font-size: 2.5vh }
         padding: 0;     padding-top: 4vh;
         font-size: 0.8vh;   display: block;
     }
+
+    .langButton { width: 7vh;   height: 7.5vh;      font-size: 3.5vh }
+
+    .bgCreditsBox { bottom: 20vh }
+
+}
+
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+
+    .bgCreditsBox { display: flex }
+    .break { margin-bottom: -10px }
 
 }

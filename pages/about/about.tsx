@@ -1,25 +1,24 @@
 
 'use client'
 
+import Background from "@/app/components/Background";
 import BodyParser from "@/app/components/BodyParser";
-import Language, { LanguageState, LanguageData } from "@/app/components/language/Language";
+import Language, { LanguageState, LanguageData, LanguageInterface } from "@/app/components/language/Language";
 import EmojiParticles, { EmojiInterface } from "@/app/components/particles/Emoji";
 import { bodyFont, randomValue, titleFont } from "@/app/utils";
 import { Metadata } from "next";
 import { useState } from "react";
 
-interface ComponentProps { 
-    languageState: LanguageState;     ascii: string[]
-    emojiImages: EmojiInterface 
+interface ComponentProps {
+    language: LanguageInterface;     ascii: string[];
+    emojiImages: EmojiInterface
 }
 
 function Components(props: ComponentProps) {
 
-    const { languageState, ascii, emojiImages } = props
+    const { language, ascii, emojiImages } = props
 
-    const [language] = languageState;       const data = language.data
-    
-    if ( data == undefined ) return
+    const data = language.data;     if ( data == undefined ) return
 
     const title1 = data.title1;     const body = []
 
@@ -43,7 +42,7 @@ function Components(props: ComponentProps) {
                     
                     <div className='h-full textBox'>
 
-                        {/* <pre className='asciiArtMobile text-center'>{ await getArt() }</pre> */}
+                        <pre className='asciiArtMobile text-center'>{ randomValue(ascii) }</pre>
 
                         <h1 className={ titleFont.className + ' text-center' }>{title1}</h1>
                         <BodyParser className={ bodyFont.className + ' inline-block aboutText' } body={body} language={language} emojiImages={emojiImages}/>
@@ -72,11 +71,14 @@ export default function About(props: Props) {
 
     const { metadata, languagesData, ascii, emojiImages } = props
 
-    const state: LanguageState = useState({})
+    const languageState: LanguageState = useState({})
+
+    const [language] = languageState
 
     return ( <>
-        <Language metadata={metadata} languageState={state} languagesData={languagesData}/>
-        <Components languageState={state} ascii={ascii} emojiImages={emojiImages}/>
+        <Background language={language}/>
+        <Language metadata={metadata} languageState={languageState} languagesData={languagesData}/>
+        <Components language={language} ascii={ascii} emojiImages={emojiImages}/>
     </> )
 
 }

@@ -23,7 +23,7 @@ function getKeywordEmojis(key: string) {
 
 function getChild( className: string, sentence: string ) {
 
-    const children = [];    let words = sentence.split(" ")
+    const children = [];        let words = sentence.split(" ")
     
     let i = 0;    const last = words[ words.length - 1 ]
 
@@ -31,21 +31,27 @@ function getChild( className: string, sentence: string ) {
 
         const isLast = word == last
 
-        const text = word + ' ';     let isKeyword = false
+        const text = word;     let isKeyword = false
+
+        const space = <p className={className} key={ i++ }> </p>
 
         for ( const key in keywords ) {
     
+            console.log( word + ': ' + key )
+
             isKeyword = text.includes(key);   if ( !isKeyword ) continue
 
             const emojis = getKeywordEmojis(key)
 
             const child = <HoverText className={ className + " text-lime-400" } text={text} emojis={emojis} key={ i++ }/>
 
-            children.push(child);   isKeyword = true;   break
+            children.push(child);   children.push(space)
+            
+            isKeyword = true; break
     
         }
 
-        if ( !isKeyword ) children.push( <p className={className} key={ i++ }>{text}</p> )
+        if ( !isKeyword ) children.push( <p className={className} key={ i++ }>{ text + ' ' }</p> )
 
         if (isLast) children.push( <p className="break" key={ i++ }/> )
 

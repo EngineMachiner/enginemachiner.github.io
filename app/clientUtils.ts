@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 
-export interface windowSize { width: number,    height: number }
+export interface WindowSize { width: number,    height: number }
 
 export function useWindowSize() {
 

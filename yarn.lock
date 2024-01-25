@@ -70,6 +70,18 @@
   resolved "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-2.0.1.tgz"
   integrity sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==
 
+"@isaacs/cliui@^8.0.2":
+  version "8.0.2"
+  resolved "https://registry.npmjs.org/@isaacs/cliui/-/cliui-8.0.2.tgz"
+  integrity sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==
+  dependencies:
+    string-width "^5.1.2"
+    string-width-cjs "npm:string-width@^4.2.0"
+    strip-ansi "^7.0.1"
+    strip-ansi-cjs "npm:strip-ansi@^6.0.1"
+    wrap-ansi "^8.1.0"
+    wrap-ansi-cjs "npm:wrap-ansi@^7.0.0"
+
 "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
   resolved "https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz"
@@ -102,27 +114,27 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@next/env@14.0.4":
-  version "14.0.4"
-  resolved "https://registry.npmjs.org/@next/env/-/env-14.0.4.tgz"
-  integrity sha512-irQnbMLbUNQpP1wcE5NstJtbuA/69kRfzBrpAD7Gsn8zm/CY6YQYc3HQBz8QPxwISG26tIm5afvvVbu508oBeQ==
+"@next/env@14.1.0":
+  version "14.1.0"
+  resolved "https://registry.npmjs.org/@next/env/-/env-14.1.0.tgz"
+  integrity sha512-Py8zIo+02ht82brwwhTg36iogzFqGLPXlRGKQw5s+qP/kMNc4MAyDeEwBKDijk6zTIbegEgu8Qy7C1LboslQAw==
 
-"@next/eslint-plugin-next@14.0.4":
-  version "14.0.4"
-  resolved "https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-14.0.4.tgz"
-  integrity sha512-U3qMNHmEZoVmHA0j/57nRfi3AscXNvkOnxDmle/69Jz/G0o/gWjXTDdlgILZdrxQ0Lw/jv2mPW8PGy0EGIHXhQ==
+"@next/eslint-plugin-next@14.1.0":
+  version "14.1.0"
+  resolved "https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-14.1.0.tgz"
+  integrity sha512-x4FavbNEeXx/baD/zC/SdrvkjSby8nBn8KcCREqk6UuwvwoAPZmaV8TFCAuo/cpovBRTIY67mHhe86MQQm/68Q==
   dependencies:
-    glob "7.1.7"
+    glob "10.3.10"
 
-"@next/swc-linux-x64-gnu@14.0.4":
-  version "14.0.4"
-  resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-14.0.4.tgz"
-  integrity sha512-/s/Pme3VKfZAfISlYVq2hzFS8AcAIOTnoKupc/j4WlvF6GQ0VouS2Q2KEgPuO1eMBwakWPB1aYFIA4VNVh667A==
+"@next/swc-linux-x64-gnu@14.1.0":
+  version "14.1.0"
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-14.1.0.tgz"
+  integrity sha512-zJ2pnoFYB1F4vmEVlb/eSe+VH679zT1VdXlZKX+pE66grOgjmKJHKacf82g/sWE4MQ4Rk2FMBCRnX+l6/TVYzQ==
 
-"@next/swc-linux-x64-musl@14.0.4":
-  version "14.0.4"
-  resolved "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-14.0.4.tgz"
-  integrity sha512-m8z/6Fyal4L9Bnlxde5g2Mfa1Z7dasMQyhEhskDATpqr+Y0mjOBZcXQ7G5U+vgL22cI4T7MfvgtrM2jdopqWaw==
+"@next/swc-linux-x64-musl@14.1.0":
+  version "14.1.0"
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-14.1.0.tgz"
+  integrity sha512-rbaIYFt2X9YZBSbH/CwGAjbBG2/MrACCVu2X0+kSykHzHnYH5FjHxwXLkcoJ10cX0aWCEynpu+rP76x0914atg==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -145,6 +157,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@pkgjs/parseargs@^0.11.0":
+  version "0.11.0"
+  resolved "https://registry.npmjs.org/@pkgjs/parseargs/-/parseargs-0.11.0.tgz"
+  integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
+
 "@rushstack/eslint-patch@^1.3.3":
   version "1.5.1"
   resolved "https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.5.1.tgz"
@@ -157,355 +174,349 @@
   dependencies:
     tslib "^2.4.0"
 
-"@tsparticles/basic@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/basic/-/basic-3.0.3.tgz"
-  integrity sha512-hMzHTuKhMoTNiqkcEnlGZ3Aa15o3tLcjVDTtuNhZlrONgu7KwVUR4mpxxWUyJHNYlho7VHtZvUU8XAYmN/uAFw==
+"@tsparticles/basic@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/basic/-/basic-3.1.0.tgz"
+  integrity sha512-6iI70Xq87UYsTo3xZb8VYOXfXdYvG0Q0f4fhtJ6iReSRJHJWUODMKpC+BJWFh+6kfeo04S2zjyiSes5E0MEulg==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
-    "@tsparticles/move-base" "^3.0.3"
-    "@tsparticles/shape-circle" "^3.0.3"
-    "@tsparticles/updater-color" "^3.0.3"
-    "@tsparticles/updater-opacity" "^3.0.3"
-    "@tsparticles/updater-out-modes" "^3.0.3"
-    "@tsparticles/updater-size" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
+    "@tsparticles/move-base" "^3.1.0"
+    "@tsparticles/shape-circle" "^3.1.0"
+    "@tsparticles/updater-color" "^3.1.0"
+    "@tsparticles/updater-opacity" "^3.1.0"
+    "@tsparticles/updater-out-modes" "^3.1.0"
+    "@tsparticles/updater-size" "^3.1.0"
 
-"@tsparticles/engine@^3.0.2", "@tsparticles/engine@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/engine/-/engine-3.0.3.tgz"
-  integrity sha512-1yGci0gMF9uBIVPXBYekORq8UYf8Twz3Xy/ZWWVCFWeVh90Amdns3fad2pf2HicZe8HZqpa1cN2Io1MOHAlO8w==
+"@tsparticles/engine@^3.0.2", "@tsparticles/engine@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/engine/-/engine-3.1.0.tgz"
+  integrity sha512-sQR79T76Y+0bdwMOQgJxA5jC+Na2XGJ8wABS4NsS3oYqD/Bdh7pwHFdoMkQu86uRrsvH5jdpqlHCMmZb7laXIQ==
 
-"@tsparticles/interaction-external-attract@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-attract/-/interaction-external-attract-3.0.3.tgz"
-  integrity sha512-Fnb556N/i7wEj+ziLLkU4dOJWYm31OKyAd8CItsC9/mVtd01jCnBR57rcR3KdlKhknzDrPAWPG0CV29PdZWmXg==
+"@tsparticles/interaction-external-attract@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-attract/-/interaction-external-attract-3.1.0.tgz"
+  integrity sha512-Fi7XJFg25mp2VvnrLqIXOPYocxUp0/X2thKWOtOq32Xa6kjqGldbPlQLGO+a94aOiH9DIzqTF4dBZ5uwnP4c3A==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/interaction-external-bounce@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-bounce/-/interaction-external-bounce-3.0.3.tgz"
-  integrity sha512-Uc7VNQxeb4KMGTmzIn3/35t0FPFFTSn8sUNyUyE24nlmSZBE1PwxuyMbCCzyj2VYGgdx4PXoijY1tLN9FGfIQg==
+"@tsparticles/interaction-external-bounce@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-bounce/-/interaction-external-bounce-3.1.0.tgz"
+  integrity sha512-SLLDfKgfs6OU+tWMP9UxopTsN+OduYYy2I4l1TZg/sQgFUiF6MgDBxMsHO5zGHD1aNWwXBCRqU+aqa65h2wZxQ==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/interaction-external-bubble@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-bubble/-/interaction-external-bubble-3.0.3.tgz"
-  integrity sha512-tA3OZfoMhYsy/cY90z8GolGjH9B+r29CplTKiAbOk+CdNFZ9oMBuMXfDhMCFURxbb1Ak4SFhwCSnsTZOokrZeQ==
+"@tsparticles/interaction-external-bubble@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-bubble/-/interaction-external-bubble-3.1.0.tgz"
+  integrity sha512-zG68jD92CYmisG1u8lbtIyFS1rZwuRy+qmYR6GSUQDeWN5Ko/cvV9Zz07hoKikVGJEcPDx+0ZQmn/WhdxMExvA==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/interaction-external-connect@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-connect/-/interaction-external-connect-3.0.3.tgz"
-  integrity sha512-KtPxzxuG+GLfejSAoQ9d2apYEBt6PnuzNtRuASbnZFMZ8xS9wXcS+6Jn3JCBx6wq7hXJY3yvX86MtIsArVS/cg==
+"@tsparticles/interaction-external-connect@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-connect/-/interaction-external-connect-3.1.0.tgz"
+  integrity sha512-o6Y9BY7EZdSo7Uj3HN18EvJ5d+Wpy69G04W0GHnzSSRfx3Td2pcljPti3HwJHm0/H8U6dcEheWz01R/D/UQWKg==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/interaction-external-grab@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-grab/-/interaction-external-grab-3.0.3.tgz"
-  integrity sha512-5JlZRpz4qB1ukcJquhnyETJdSMPu/t7ZNNgecWgiDd1akN3/zQAUp6cY918C1Mtq3J7vElBcyqf/6mY6wApmzg==
+"@tsparticles/interaction-external-grab@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-grab/-/interaction-external-grab-3.1.0.tgz"
+  integrity sha512-Ucrc4DVcOehpWUAP42QBFAFBOOoQRAG2WmbMe+wljfG5w/h7DuzIPsE5V46qasH1iGOP7xMsMXsCipHr/Uiq9Q==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/interaction-external-pause@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-pause/-/interaction-external-pause-3.0.3.tgz"
-  integrity sha512-iQnN9cEhInQpGEaYe03L7Y603MuSwBco4FaMYcPcZxHCf6uEAag6zQPxdIZjF/a49dVUuEKv6elW+y07DTVYBg==
+"@tsparticles/interaction-external-pause@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-pause/-/interaction-external-pause-3.1.0.tgz"
+  integrity sha512-H7xBsLswsCb5awZQDn0FAiHJLnP/JZTSMSZBPXk7HF18tXuTDranhRjA1v3+8OjC4laloiXxwIoO6UCpP/1Chg==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/interaction-external-push@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-push/-/interaction-external-push-3.0.3.tgz"
-  integrity sha512-Tiw/o+2jJwpIGPSez8pQSUAzoSSga5q33qtwJgWcjiMedBRnwSJNIdShkR5g5EiWop8GSN9U8AnCA3UrG3cq6Q==
+"@tsparticles/interaction-external-push@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-push/-/interaction-external-push-3.1.0.tgz"
+  integrity sha512-JiLj83fIT1gsN2QNBk8avm/xWia4V4gH0PUz3xH3J4Bg7zEIaqTdqT6I9SAIInQEhfN2WsV9baOS7OKooX5WDA==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/interaction-external-remove@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-remove/-/interaction-external-remove-3.0.3.tgz"
-  integrity sha512-Vo38bKAzFyJDLE6WNespJJn/cIEm9qFZZ6ZVwPbdFDI9rK8gmIqHgmHudQduVPvs2Co9oIjfQq0OgVG70bHFvQ==
+"@tsparticles/interaction-external-remove@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-remove/-/interaction-external-remove-3.1.0.tgz"
+  integrity sha512-xCAr3ucMtUthxuM59X5Fgp9imWGHeNKUUW/0KAUIoAN/cPXUK/Y1SumhuXmos20gjw7m0yHPky8ReQkAV3yPZg==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/interaction-external-repulse@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-repulse/-/interaction-external-repulse-3.0.3.tgz"
-  integrity sha512-6OOk2NzhVsLu7xp8fyn6xw+zVUYlmGcIMgJSa5LzaUZ/gHoVZ2f7UKdtKxZVnqOCWO+Ff8P7rRtm5q39JS8Pvg==
+"@tsparticles/interaction-external-repulse@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-repulse/-/interaction-external-repulse-3.1.0.tgz"
+  integrity sha512-lhF0Ta1YBUfc2RencwvrC98gd8rhlGhxJpzAHg9es5aqxV9+WiGsxT7yP6cWUWgXmoi5Vh9fd8I4tGJZkLsbCg==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/interaction-external-slow@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-slow/-/interaction-external-slow-3.0.3.tgz"
-  integrity sha512-+oNTTpMjHooMD/+BVtk6xllpVimcRoXlMPrQ+Pj7CndhoQNR6s8MacUyw2HPYO9epuItGui9qq1HyFWqZRQtSA==
+"@tsparticles/interaction-external-slow@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-slow/-/interaction-external-slow-3.1.0.tgz"
+  integrity sha512-1B0nZPjAzJRRtFWVyaaFNX0HsQua9/0UPoxQyyWnH9FCUD/1l8H7OBzMGPcHeAMXDTP+qlaNcstGwXBE7NEIig==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/interaction-external-trail@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-trail/-/interaction-external-trail-3.0.3.tgz"
-  integrity sha512-qP5820gtY2DsIMC8BodFu0cr+f4jvAlnXT3nwpf2N4Rfcn1c0bhzJI8TNtBB/z9wkY8xBKZFhJBwGnNn8sqyrg==
+"@tsparticles/interaction-external-trail@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/interaction-external-trail/-/interaction-external-trail-3.1.0.tgz"
+  integrity sha512-BqVCZbP3QsihTIzdUlRg1cYtXCjFh4F8+zs39UZ/IoZZkSvw5ChKsdOQc0WEkfk9PW1Bn4+6fZD/tlFzhrRaPw==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/interaction-particles-attract@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/interaction-particles-attract/-/interaction-particles-attract-3.0.3.tgz"
-  integrity sha512-3DdFXxMujkLRZAAnid8eBW3BwKe3SGoXzVaSaiht7tq/Q0H98h3ryMJNeD6Rr0PbxGFWid3zmwk8+gdhQyOqZg==
+"@tsparticles/interaction-particles-attract@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/interaction-particles-attract/-/interaction-particles-attract-3.1.0.tgz"
+  integrity sha512-AW0sczmiS2Iuukq0fGguNUNYIJchIAUypJWmbkGVIqizy2GzGj41R9RlsUJPHcmzJVx1WWvJh89T+emPR/ZVlA==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/interaction-particles-collisions@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/interaction-particles-collisions/-/interaction-particles-collisions-3.0.3.tgz"
-  integrity sha512-pYxzrmvwLj4gwQdg33xTDm6670lQExLoCmeATNAukN4qTFWqYnS45AWrUsedKAverDMcnu1iT2Vs+xmEwtSFcw==
+"@tsparticles/interaction-particles-collisions@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/interaction-particles-collisions/-/interaction-particles-collisions-3.1.0.tgz"
+  integrity sha512-N1vR1+opod7sCyxprFruaIRIVUuUTl1MtxijAX5QCeiLCg56tkYKzGf5+BaqOkXk0spRfVcI0y+Yn9Rejmjdyg==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/interaction-particles-links@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/interaction-particles-links/-/interaction-particles-links-3.0.3.tgz"
-  integrity sha512-is2I/GTz2nC+2zupyVGbr2tbtp5qGRiwkC3lMWpmvfMWiXxs0iW4w7o/eFy6W5n1Sw2GKLjLUxMn0+xLwRVOEQ==
+"@tsparticles/interaction-particles-links@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/interaction-particles-links/-/interaction-particles-links-3.1.0.tgz"
+  integrity sha512-MQYQUyt0eKsXAxDgk9xttDj/mYFu11X0V4xq7AyaDjeGp/r0Q3BOwZWJhBHPVShIXXBecLkkGbaEUp4SEN5uGw==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/move-base@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/move-base/-/move-base-3.0.3.tgz"
-  integrity sha512-4OFyZ55zWGgw1di1R7hgjlqySE+SEHrAHEqoEq8x14/D1Zg3ai/6BRFqze161ybtwddpz/ukrFy9cpJaUDH1kA==
+"@tsparticles/move-base@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/move-base/-/move-base-3.1.0.tgz"
+  integrity sha512-2O8dJGbynuCRXTgUZJeeIxy2AbLwwfGOMwvaZFmJOfjxJwCGQaVJU3scfxzzvmy9Br6plqMV1ml10lpuKXek3g==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/move-parallax@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/move-parallax/-/move-parallax-3.0.3.tgz"
-  integrity sha512-LP9b+Yz3MpnReAgSQrBIINg+fQMzmKlYZ79FQLZdI5UlnyGEarYTYEpcg6VyBWb+QVPDCE+RfOQINfUPI5PB4A==
+"@tsparticles/move-parallax@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/move-parallax/-/move-parallax-3.1.0.tgz"
+  integrity sha512-kbyRwLF2w4GJm5CRQwc4NrB50diSwfPkb+5sI5yMZGJkiYMf1Tc2YhhvDPeh+nZfhPFMTZS7to4/COd2qfkAVA==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/plugin-absorbers@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/plugin-absorbers/-/plugin-absorbers-3.0.3.tgz"
-  integrity sha512-mpAgIRdAmbb3+SX3KNGbmS0YsMJYx711/dV3e3kCu1M/k7ptFze/oFDLMb1f3614WWRlJCwQGdtmAAv517tpWg==
+"@tsparticles/plugin-absorbers@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/plugin-absorbers/-/plugin-absorbers-3.1.0.tgz"
+  integrity sha512-OLIj47uUwLKACxgCkiNjT7wKgoL79qkBE0v/wDWf+y9CrK//SN7RzOnZeTT3Xd4pUHdeuTYRjQ5EVNrH1fB+xA==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/plugin-easing-quad@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/plugin-easing-quad/-/plugin-easing-quad-3.0.3.tgz"
-  integrity sha512-KgzX9VzkPO61GTcLUHGx+wbiBdnxxp7174zICUiLZxYUuKYkn31k00MPsbja3HgW5lSZ6ruFh4RERi8nVwXo/w==
+"@tsparticles/plugin-easing-quad@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/plugin-easing-quad/-/plugin-easing-quad-3.1.0.tgz"
+  integrity sha512-UVcRVZhW/BmJ9N1Rgj2wmBLPG3kd/BPlMGXfZugl/7XZ9ABA/wVUuBY4KDZ5poLxMYAHH/XXCN0mY1hydAumYA==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/plugin-emitters-shape-circle@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/plugin-emitters-shape-circle/-/plugin-emitters-shape-circle-3.0.3.tgz"
-  integrity sha512-TDB0cw7P27orHwm51Uq6OZoQ3iiZOl948//q6WFvQrufR+TaKCkoyttqzgdV7OKVaMNZa+YlUZ6BIDv5aj5PSA==
+"@tsparticles/plugin-emitters-shape-circle@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/plugin-emitters-shape-circle/-/plugin-emitters-shape-circle-3.1.0.tgz"
+  integrity sha512-X6AXYm20Y6JLxAAxR2cGUe33GUjTgOFN8AXmTZfF6hI5TP1jOui2BWsaxI6v57/xRj1i5ozbQb7ccZndfO8AyQ==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
-    "@tsparticles/plugin-emitters" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
+    "@tsparticles/plugin-emitters" "^3.1.0"
 
-"@tsparticles/plugin-emitters-shape-square@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/plugin-emitters-shape-square/-/plugin-emitters-shape-square-3.0.3.tgz"
-  integrity sha512-gYIN24gqDkzQMfNMdlUqWQBHTvugghRMkEw42FxllKtHZ9urNBWqPA3EGrNL1Z6ZXZI8UuG18udUZKQsxq36vg==
+"@tsparticles/plugin-emitters-shape-square@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/plugin-emitters-shape-square/-/plugin-emitters-shape-square-3.1.0.tgz"
+  integrity sha512-EgVG6GhUriemGHJBeV26/65tblYI9nGDd0RtPjbQSBlsBG654onOTfd6LYHyAQ8uO6CGor9lBdr5DCHVA7fuxQ==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
-    "@tsparticles/plugin-emitters" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
+    "@tsparticles/plugin-emitters" "^3.1.0"
 
-"@tsparticles/plugin-emitters@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/plugin-emitters/-/plugin-emitters-3.0.3.tgz"
-  integrity sha512-Rt1Hrp/teqz6sLPwHShR8L7AWfQCLttXtf7r1VW7iKUhSou7Ye2L77ZCKzqq7xvEszPztYEVMLqjttccGzfs8Q==
+"@tsparticles/plugin-emitters@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/plugin-emitters/-/plugin-emitters-3.1.0.tgz"
+  integrity sha512-9MtOYt11fQ57tkz9dImkdTcOzaUp9KzoPHuqqEYekJT1n3aAz8vDw4+usvB3+Tidfa44fSTuSlFOblBiuvPytg==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
 "@tsparticles/react@^3.0.0":
   version "3.0.0"
   resolved "https://registry.npmjs.org/@tsparticles/react/-/react-3.0.0.tgz"
   integrity sha512-hjGEtTT1cwv6BcjL+GcVgH++KYs52bIuQGW3PWv7z3tMa8g0bd6RI/vWSLj7p//NZ3uTjEIeilYIUPBh7Jfq/Q==
 
-"@tsparticles/shape-circle@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/shape-circle/-/shape-circle-3.0.3.tgz"
-  integrity sha512-BXolExTzU8wKbV9XvYwYmsYVMBFpx6kb+k880Do+HMp9qUvnJ4G7jshwPp7Ns8svoN4EvbqqhacNd029ESMMYw==
+"@tsparticles/shape-circle@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/shape-circle/-/shape-circle-3.1.0.tgz"
+  integrity sha512-HZ/0pdhV3sUfoOY+ODFiDmaJd6YS6+hHqpsJaLp8q6LHW3KOYOptGZLRy8/pmyzw3ARO6EluZtPrvCAdZmlAfg==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/shape-emoji@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/shape-emoji/-/shape-emoji-3.0.3.tgz"
-  integrity sha512-THOeWohtdXQpI3xUjVAcL4XVIWjE66MpGcq1w4Jo+V8luab1fCEKT6GQPPINmkiQe7lWChdz6qUX/FfPYmWG4A==
+"@tsparticles/shape-emoji@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/shape-emoji/-/shape-emoji-3.1.0.tgz"
+  integrity sha512-UkpNP+mz7DJZe86Qd/z/2HR5uFKZzAdMi2lwaUkvdFGzxRvjj0AoxhVODDSFQhg/cEahgRAp6u1v/vEgiX0BEw==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/shape-image@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/shape-image/-/shape-image-3.0.3.tgz"
-  integrity sha512-xc2HAmmF1iffOzit3UnIJGQuNX6gqxpO4srm3EOQEoWcS62v2Dr+tI6pEhY60RoVrDhBzdRI2da3+EvL5J39ag==
+"@tsparticles/shape-image@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/shape-image/-/shape-image-3.1.0.tgz"
+  integrity sha512-e8qhPGC02+qi5eTP0c7X3v1VWxIoJ/UgpzyQ45S2JAupZfEnWWQnxayhDNeWgLBXVwCG5LSkPBQlHwNlaThlZA==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/shape-line@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/shape-line/-/shape-line-3.0.3.tgz"
-  integrity sha512-JOJrFKcnDgKJlD2YlJGISyuMRMKCdEuqYvUuXD4JqBR7XP8hoAgMEx2Of3rJ7sZyoAo2pdYEqDoSGWq0vgLuvQ==
+"@tsparticles/shape-line@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/shape-line/-/shape-line-3.1.0.tgz"
+  integrity sha512-NBKIAfdSG1BndD73Dm+omgpRwNAxvmZRiQrlWKvnK7URNfabLeUPvkn0HDSku37fOwZ3WieGj2r7bmELZ2OEnQ==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/shape-polygon@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/shape-polygon/-/shape-polygon-3.0.3.tgz"
-  integrity sha512-gl+XW46oOudD84lgano6exNEKLyXwOXpHJPRm+dz2HLbRuuU6wCFd5isY4YCr47HJL7wJ7u7pm9LF1kkMk68Sg==
+"@tsparticles/shape-polygon@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/shape-polygon/-/shape-polygon-3.1.0.tgz"
+  integrity sha512-UEWTz1zUrna+bnBu5Zpby+isKeXV0luRLT9OQlgueHQ7aV1XFlWEAkKfEHRbD6xZIjtZhxpa7gU9qo4D+doUNg==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/shape-square@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/shape-square/-/shape-square-3.0.3.tgz"
-  integrity sha512-FACZ0OFPMhdeRnspgU8CJimEyNhXNdmP/l5i8booj9ECvuYATy4yRvTbtktBy/mVuehinM8tgFYKgg8UF/as6Q==
+"@tsparticles/shape-square@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/shape-square/-/shape-square-3.1.0.tgz"
+  integrity sha512-gX2+rmMcl2P/mjbHO9ZPAvcv0k1PSwJec2CrhbJbjC9BHjH9UMPi1gYpFyNXCgo+4YlxQgy4Zg9bUnLWndeSSg==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/shape-star@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/shape-star/-/shape-star-3.0.3.tgz"
-  integrity sha512-P6C+oFneM75Sx2iuLnyNEZR+Cd7V3IIi7lYws54pcUdrYfvQ0lXdQZpUf3noHXoi03c+PnVvEsXvC+fX/+Zdlw==
+"@tsparticles/shape-star@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/shape-star/-/shape-star-3.1.0.tgz"
+  integrity sha512-JL9NJSLRxQSGvl5TUB6kWhMkPwESJrQ8ps7nxZ6Mtgz9IhkHfOO2eBg7nTtryMVW0kHJR0febzUt+xpExgJa6g==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/shape-text@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/shape-text/-/shape-text-3.0.3.tgz"
-  integrity sha512-OoGA6193n6NXDJrLovmaa9Yu+ErfwrVRoxiAK5mVayM5ecZX6vhD8+c0H+pR2nY6iOn0h8GXU/FYmX9RFaIaOw==
+"@tsparticles/shape-text@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/shape-text/-/shape-text-3.1.0.tgz"
+  integrity sha512-eVFsZbQ3g8034/7YK/FbaLZd9YnIl7C9M7IuJZjaLgeJy8RnVO0JGEDI9TxqDGy/qt50TvXje7JBSj6TLymRaA==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/slim@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/slim/-/slim-3.0.3.tgz"
-  integrity sha512-E6ci6uEujJLaoY1JuFwDDOlJHaAAWbQiSEpgQUqETjD9+yEiiQ0zhxrua4HImU2+JhA6vSi7b1rTc7TYBjRRnQ==
+"@tsparticles/slim@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/slim/-/slim-3.1.0.tgz"
+  integrity sha512-qPA6SbugTJp3+xR9MXfUnBC0bT8RHQMHjwu8Y6mU6FvVH/G81TPSCBO/qP5VBqB1M/kIVsOPoAjB226cOw/IMg==
   dependencies:
-    "@tsparticles/basic" "^3.0.3"
-    "@tsparticles/engine" "^3.0.3"
-    "@tsparticles/interaction-external-attract" "^3.0.3"
-    "@tsparticles/interaction-external-bounce" "^3.0.3"
-    "@tsparticles/interaction-external-bubble" "^3.0.3"
-    "@tsparticles/interaction-external-connect" "^3.0.3"
-    "@tsparticles/interaction-external-grab" "^3.0.3"
-    "@tsparticles/interaction-external-pause" "^3.0.3"
-    "@tsparticles/interaction-external-push" "^3.0.3"
-    "@tsparticles/interaction-external-remove" "^3.0.3"
-    "@tsparticles/interaction-external-repulse" "^3.0.3"
-    "@tsparticles/interaction-external-slow" "^3.0.3"
-    "@tsparticles/interaction-particles-attract" "^3.0.3"
-    "@tsparticles/interaction-particles-collisions" "^3.0.3"
-    "@tsparticles/interaction-particles-links" "^3.0.3"
-    "@tsparticles/move-base" "^3.0.3"
-    "@tsparticles/move-parallax" "^3.0.3"
-    "@tsparticles/plugin-easing-quad" "^3.0.3"
-    "@tsparticles/shape-circle" "^3.0.3"
-    "@tsparticles/shape-emoji" "^3.0.3"
-    "@tsparticles/shape-image" "^3.0.3"
-    "@tsparticles/shape-line" "^3.0.3"
-    "@tsparticles/shape-polygon" "^3.0.3"
-    "@tsparticles/shape-square" "^3.0.3"
-    "@tsparticles/shape-star" "^3.0.3"
-    "@tsparticles/updater-color" "^3.0.3"
-    "@tsparticles/updater-life" "^3.0.3"
-    "@tsparticles/updater-opacity" "^3.0.3"
-    "@tsparticles/updater-out-modes" "^3.0.3"
-    "@tsparticles/updater-rotate" "^3.0.3"
-    "@tsparticles/updater-size" "^3.0.3"
-    "@tsparticles/updater-stroke-color" "^3.0.3"
+    "@tsparticles/basic" "^3.1.0"
+    "@tsparticles/engine" "^3.1.0"
+    "@tsparticles/interaction-external-attract" "^3.1.0"
+    "@tsparticles/interaction-external-bounce" "^3.1.0"
+    "@tsparticles/interaction-external-bubble" "^3.1.0"
+    "@tsparticles/interaction-external-connect" "^3.1.0"
+    "@tsparticles/interaction-external-grab" "^3.1.0"
+    "@tsparticles/interaction-external-pause" "^3.1.0"
+    "@tsparticles/interaction-external-push" "^3.1.0"
+    "@tsparticles/interaction-external-remove" "^3.1.0"
+    "@tsparticles/interaction-external-repulse" "^3.1.0"
+    "@tsparticles/interaction-external-slow" "^3.1.0"
+    "@tsparticles/interaction-particles-attract" "^3.1.0"
+    "@tsparticles/interaction-particles-collisions" "^3.1.0"
+    "@tsparticles/interaction-particles-links" "^3.1.0"
+    "@tsparticles/move-parallax" "^3.1.0"
+    "@tsparticles/plugin-easing-quad" "^3.1.0"
+    "@tsparticles/shape-emoji" "^3.1.0"
+    "@tsparticles/shape-image" "^3.1.0"
+    "@tsparticles/shape-line" "^3.1.0"
+    "@tsparticles/shape-polygon" "^3.1.0"
+    "@tsparticles/shape-square" "^3.1.0"
+    "@tsparticles/shape-star" "^3.1.0"
+    "@tsparticles/updater-life" "^3.1.0"
+    "@tsparticles/updater-rotate" "^3.1.0"
+    "@tsparticles/updater-stroke-color" "^3.1.0"
 
-"@tsparticles/updater-color@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/updater-color/-/updater-color-3.0.3.tgz"
-  integrity sha512-zOQuO+nJIGcYK2iS4k6+HyO+APfJ58OiZVvkerZaI/on5yE5Cq4goqCrjJBkRWo6WimdhDJjS9vxAyon8Y7CPQ==
+"@tsparticles/updater-color@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/updater-color/-/updater-color-3.1.0.tgz"
+  integrity sha512-AMy5WrQZs+eKRYcpAsGUTY3xB0kkBKfWAcW0e/RVvTXKzTy+sbZBy9xAmrfspXHXkSNGg3lYT79yMxjJ3utbRw==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/updater-destroy@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/updater-destroy/-/updater-destroy-3.0.3.tgz"
-  integrity sha512-nCOP2oxg9Qy5h9WLpR46sZLp0X6Y7/0LVw2Jf7Kz+BNO9aqYW54tRS8AiG9j6DpMmt0HWbiB37Nv05s7/bZnKQ==
+"@tsparticles/updater-destroy@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/updater-destroy/-/updater-destroy-3.1.0.tgz"
+  integrity sha512-9uOluvBRMsOm4zDEfCfviWl15paD1egEkdVTyeMGlo4kfjiSAiRMKCTbZ0+Qj9XW/t35RlqHWQqJiJpzf3XNEg==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/updater-life@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/updater-life/-/updater-life-3.0.3.tgz"
-  integrity sha512-2YZoK13qqPB+m2QgcmStiZdCdvmkhIYHCv5fVqHFXrghS6IMqxEOAh+WV5FRcnL19UvMvKZUFLxmubrKnsi1RA==
+"@tsparticles/updater-life@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/updater-life/-/updater-life-3.1.0.tgz"
+  integrity sha512-/3beq8hx8+o4H8HNcg2l0vWgKjRKCA7iUdzFDKDNoYZ5ybXNpm4fNCVwjNYQBut8yjuFrVqnohWtanHVrYEtDg==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/updater-opacity@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/updater-opacity/-/updater-opacity-3.0.3.tgz"
-  integrity sha512-B+tCeItEEKfwJMeZ5l7jdggFDdt2Rzo3GSWrbTzsa4RxTlzNBZcuFp5qNOuwnBUERBM9u7wxPnfF+x0fDJlGgw==
+"@tsparticles/updater-opacity@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/updater-opacity/-/updater-opacity-3.1.0.tgz"
+  integrity sha512-jyS08KmOzVfrlFLL1AmpU/AeCiPJKMI5gBhitFSlUVP734+1Ht/7aVccSc7onMcrEf+GzRfi5KbvosqQ3A8QMQ==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/updater-out-modes@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/updater-out-modes/-/updater-out-modes-3.0.3.tgz"
-  integrity sha512-3tJ9UKc00KalPVmEfrHUDaXcOAJNjG/83ufiLnj4ZVec4PeibSck7OGkYgNht8O5CR93ZxONNI85DcUHCkBXXg==
+"@tsparticles/updater-out-modes@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/updater-out-modes/-/updater-out-modes-3.1.0.tgz"
+  integrity sha512-jMqzCZK7hgCH8YcHdmiYOrMKqD/t9uhjurdJwzK4vjWaqgjTrdrZ/uU5NL0HNJ29G1b8gqeiqC0Kd5Sdb+E1AA==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/updater-roll@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/updater-roll/-/updater-roll-3.0.3.tgz"
-  integrity sha512-OH1iyHAUvdqKOQN94isViQVUORNUqBDDkgkukvRp6La0Xjk1sop3pVtfH5kADkuolunzD17SlKWup75AUGZKIw==
+"@tsparticles/updater-roll@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/updater-roll/-/updater-roll-3.1.0.tgz"
+  integrity sha512-yxtVMDTEEG1YouTt3a2Ike1WF8LJSb8Bs9Gyll8z0tjae2XcPvBcX65x7tbNpAbMntcKyt+AfbJfJ+/POyFRMA==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/updater-rotate@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/updater-rotate/-/updater-rotate-3.0.3.tgz"
-  integrity sha512-447je9lpU++TxPcZjUlit1NaBctIyT2x6W5NevVjrxckoAWoW2OYuy4mhuJRxn3SZHJ7/t2Wt6Es1g3DR4plRA==
+"@tsparticles/updater-rotate@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/updater-rotate/-/updater-rotate-3.1.0.tgz"
+  integrity sha512-2mPhjxv/RAshoaITnbLigbj2UACY7yf2M87p/fI4RIKi9rUX7bUe8tq5ovZucl1z5+HMeZF+HcLDaUNs45vdog==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/updater-size@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/updater-size/-/updater-size-3.0.3.tgz"
-  integrity sha512-mgo7VXJR6rfeSuVT2alxzdYs9BO2tr0iWiBKkbQMH/GSpLI4juijvHxUKC7MXk5E8C0f9ZLfoeSDH1NaeizbDw==
+"@tsparticles/updater-size@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/updater-size/-/updater-size-3.1.0.tgz"
+  integrity sha512-qRgyrJxBX/zUtdRmpdVe9kcylsCg2hBmD7dobeSbMP/UBp+Esb12Oj8egLCjAq4ot4w7BckLLIrqJi/HvI4v9g==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/updater-stroke-color@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/updater-stroke-color/-/updater-stroke-color-3.0.3.tgz"
-  integrity sha512-8CdRz5KE3RxmuJlao92w0Fo1BtwMLSkZIATMLkzuJYUu0Fq5AWnBkUxxe7r5Qk015n9qaMo8aWiQFwrYJ+FGAg==
+"@tsparticles/updater-stroke-color@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/updater-stroke-color/-/updater-stroke-color-3.1.0.tgz"
+  integrity sha512-/PkgH/tUKQ+KBS3N5h3fqPuwhyqBVnYrDbjwwcy2+UZzPF9X7fCkAnVbUFEWEuLz1ENl8WUMrUtxcf6gCeVjOA==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/updater-tilt@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/updater-tilt/-/updater-tilt-3.0.3.tgz"
-  integrity sha512-vdw5pBuBosWIq54u7CJD71r2P0UqlMZpOLof8So+Wacm92khZ3ONMpnPbvo0ghBVpZQENvpm5yqJPnroD8KP4Q==
+"@tsparticles/updater-tilt@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/updater-tilt/-/updater-tilt-3.1.0.tgz"
+  integrity sha512-Uml6VCiFmUnNUgH6F5omnBOLBQ7LbE/c3I9TgFul7mmpRWzS8bf6Blyl3YLvw6stIGkzMrS/kncZoAOG+IHNXA==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/updater-twinkle@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/updater-twinkle/-/updater-twinkle-3.0.3.tgz"
-  integrity sha512-5ejosaUYLji5Wr7uT9bqNae1L0PVb4XOY9a6bhMfoWEQQ8MAGFDFLcSF8ilgL0xpp6GsyF646rM8caIERLUvpQ==
+"@tsparticles/updater-twinkle@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/updater-twinkle/-/updater-twinkle-3.1.0.tgz"
+  integrity sha512-QwrmguinlCvmxEU+8Q4LY/bXxrypC+MJ2QX+oHrL6lNYOzV9IB9UTSSljjiwnUjisMAHYpIKQb+Bi3Yx6Ub7kg==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
-"@tsparticles/updater-wobble@^3.0.3":
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/@tsparticles/updater-wobble/-/updater-wobble-3.0.3.tgz"
-  integrity sha512-PwO53o1Cb8Wwt5jv6hwJ1zBgSH0L6Hz4FD1uJGW/VcYYUg+/NIlUWKpC77PIqS8NE9hiX0c8Yjg1hw60bHR75Q==
+"@tsparticles/updater-wobble@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/@tsparticles/updater-wobble/-/updater-wobble-3.1.0.tgz"
+  integrity sha512-6CqDy9Z+Uj9ePW1G15ueheHTrxY2zitKX9wJI+sc73i7FiXVmkheZkHj1YBmKjtvi+INcsr5lsJnGVroaO5K0A==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
 
 "@types/json5@^0.0.29":
   version "0.0.29"
@@ -620,12 +631,22 @@ ansi-regex@^5.0.1:
   resolved "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz"
   integrity sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==
 
-ansi-styles@^4.1.0:
+ansi-regex@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.npmjs.org/ansi-regex/-/ansi-regex-6.0.1.tgz"
+  integrity sha512-n5M855fKb2SsfMIiFFoVrABHJC8QtHwVx+mHWP3QcEqBHYienj5dHSgjbxtC0WEZXYt4wcD6zrQElDPhFuZgfA==
+
+ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   version "4.3.0"
   resolved "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz"
   integrity sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==
   dependencies:
     color-convert "^2.0.1"
+
+ansi-styles@^6.1.0:
+  version "6.2.1"
+  resolved "https://registry.npmjs.org/ansi-styles/-/ansi-styles-6.2.1.tgz"
+  integrity sha512-bN798gFfQX+viw3R7yrGWRqnrN2oRkEkUjjl4JNn4E8GxxbjtG3FbrEIIY3l8/hrwUwIeCZvi4QuOTP4MErVug==
 
 any-promise@^1.0.0:
   version "1.3.0"
@@ -795,6 +816,13 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
+brace-expansion@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.1.tgz"
+  integrity sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==
+  dependencies:
+    balanced-match "^1.0.0"
+
 braces@^3.0.2, braces@~3.0.2:
   version "3.0.2"
   resolved "https://registry.npmjs.org/braces/-/braces-3.0.2.tgz"
@@ -838,10 +866,10 @@ camelcase-css@^2.0.1:
   resolved "https://registry.npmjs.org/camelcase-css/-/camelcase-css-2.0.1.tgz"
   integrity sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==
 
-caniuse-lite@^1.0.30001406, caniuse-lite@^1.0.30001538, caniuse-lite@^1.0.30001541:
-  version "1.0.30001554"
-  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001554.tgz"
-  integrity sha512-A2E3U//MBwbJVzebddm1YfNp7Nud5Ip+IPn4BozBmn4KqVX7AvluoIDFWjsv5OkGnKUXQVmMSoMKLa3ScCblcQ==
+caniuse-lite@^1.0.30001538, caniuse-lite@^1.0.30001541, caniuse-lite@^1.0.30001579:
+  version "1.0.30001579"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001579.tgz"
+  integrity sha512-u5AUVkixruKHJjw/pj9wISlcMpgFWzSrczLZbrqBSxukQixmg0SJ5sZTpvaFvxU0HoQKd4yoyAogyrAz9pzJnA==
 
 chalk@^4.0.0:
   version "4.1.2"
@@ -893,7 +921,7 @@ concat-map@0.0.1:
   resolved "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
 
-cross-spawn@^7.0.2:
+cross-spawn@^7.0.0, cross-spawn@^7.0.2:
   version "7.0.3"
   resolved "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz"
   integrity sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==
@@ -990,10 +1018,20 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
+eastasianwidth@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/eastasianwidth/-/eastasianwidth-0.2.0.tgz"
+  integrity sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==
+
 electron-to-chromium@^1.4.535:
   version "1.4.567"
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.567.tgz"
   integrity sha512-8KR114CAYQ4/r5EIEsOmOMqQ9j0MRbJZR3aXD/KFA8RuKzyoUB4XrUCg+l8RUGqTVQgKNIgTpjaG8YHRPAbX2w==
+
+emoji-regex@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz"
+  integrity sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==
 
 emoji-regex@^9.2.2:
   version "9.2.2"
@@ -1108,12 +1146,12 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-eslint-config-next@^14.0.4:
-  version "14.0.4"
-  resolved "https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-14.0.4.tgz"
-  integrity sha512-9/xbOHEQOmQtqvQ1UsTQZpnA7SlDMBtuKJ//S4JnoyK3oGLhILKXdBgu/UO7lQo/2xOykQULS1qQ6p2+EpHgAQ==
+eslint-config-next@^14.1.0:
+  version "14.1.0"
+  resolved "https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-14.1.0.tgz"
+  integrity sha512-SBX2ed7DoRFXC6CQSLc/SbLY9Ut6HxNB2wPTcoIWjUMd7aF7O/SIE7111L8FdZ9TXsNV4pulUDnfthpyPtbFUg==
   dependencies:
-    "@next/eslint-plugin-next" "14.0.4"
+    "@next/eslint-plugin-next" "14.1.0"
     "@rushstack/eslint-patch" "^1.3.3"
     "@typescript-eslint/parser" "^5.4.2 || ^6.0.0"
     eslint-import-resolver-node "^0.3.6"
@@ -1390,6 +1428,14 @@ for-each@^0.3.3:
   dependencies:
     is-callable "^1.1.3"
 
+foreground-child@^3.1.0:
+  version "3.1.1"
+  resolved "https://registry.npmjs.org/foreground-child/-/foreground-child-3.1.1.tgz"
+  integrity sha512-TMKDUnIte6bfb5nWv7V/caI169OHgvwjb7V4WkeUvbQQdjr5rWKqHFiKWb/fcOwB+CzBT+qbWjvj+DVwRskpIg==
+  dependencies:
+    cross-spawn "^7.0.0"
+    signal-exit "^4.0.1"
+
 fraction.js@^4.3.6:
   version "4.3.7"
   resolved "https://registry.npmjs.org/fraction.js/-/fraction.js-4.3.7.tgz"
@@ -1466,12 +1512,7 @@ glob-parent@~5.1.2:
   dependencies:
     is-glob "^4.0.1"
 
-glob-to-regexp@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.npmjs.org/glob-to-regexp/-/glob-to-regexp-0.4.1.tgz"
-  integrity sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==
-
-glob@^7.1.3, glob@7.1.7:
+glob@^7.1.3:
   version "7.1.7"
   resolved "https://registry.npmjs.org/glob/-/glob-7.1.7.tgz"
   integrity sha512-OvD9ENzPLbegENnYP5UUfJIirTg4+XwMWGaQfQTY0JenxNvvIKP3U3/tAQSPIu/lHxXYSZmpXlUHeqAIdKzBLQ==
@@ -1482,6 +1523,17 @@ glob@^7.1.3, glob@7.1.7:
     minimatch "^3.0.4"
     once "^1.3.0"
     path-is-absolute "^1.0.0"
+
+glob@10.3.10:
+  version "10.3.10"
+  resolved "https://registry.npmjs.org/glob/-/glob-10.3.10.tgz"
+  integrity sha512-fa46+tv1Ak0UPK1TOy/pZrIybNNt4HCv7SDzwyfiOZkvZLEbjsZkJBPtDHVshZjbecAoAGSC20MjLDG/qr679g==
+  dependencies:
+    foreground-child "^3.1.0"
+    jackspeak "^2.3.5"
+    minimatch "^9.0.1"
+    minipass "^5.0.0 || ^6.0.2 || ^7.0.0"
+    path-scurry "^1.10.1"
 
 glob@7.1.6:
   version "7.1.6"
@@ -1528,7 +1580,7 @@ gopd@^1.0.1:
   dependencies:
     get-intrinsic "^1.1.3"
 
-graceful-fs@^4.1.2, graceful-fs@^4.2.11, graceful-fs@^4.2.4:
+graceful-fs@^4.2.11, graceful-fs@^4.2.4:
   version "4.2.11"
   resolved "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz"
   integrity sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==
@@ -1693,6 +1745,11 @@ is-finalizationregistry@^1.0.2:
   dependencies:
     call-bind "^1.0.2"
 
+is-fullwidth-code-point@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz"
+  integrity sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==
+
 is-generator-function@^1.0.10:
   version "1.0.10"
   resolved "https://registry.npmjs.org/is-generator-function/-/is-generator-function-1.0.10.tgz"
@@ -1816,6 +1873,15 @@ iterator.prototype@^1.1.2:
     reflect.getprototypeof "^1.0.4"
     set-function-name "^2.0.1"
 
+jackspeak@^2.3.5:
+  version "2.3.6"
+  resolved "https://registry.npmjs.org/jackspeak/-/jackspeak-2.3.6.tgz"
+  integrity sha512-N3yCS/NegsOBokc8GAdM8UcmfsKiSS8cipheD/nivzr700H+nsMOxJjQnvwOcRYVuFkdH0wGUvW2WbXGmrZGbQ==
+  dependencies:
+    "@isaacs/cliui" "^8.0.2"
+  optionalDependencies:
+    "@pkgjs/parseargs" "^0.11.0"
+
 jiti@^1.19.1:
   version "1.20.0"
   resolved "https://registry.npmjs.org/jiti/-/jiti-1.20.0.tgz"
@@ -1928,6 +1994,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+"lru-cache@^9.1.1 || ^10.0.0":
+  version "10.1.0"
+  resolved "https://registry.npmjs.org/lru-cache/-/lru-cache-10.1.0.tgz"
+  integrity sha512-/1clY/ui8CzjKFyjdvwPWJUYKiFVXG2I2cY0ssG7h4+hwk+XOIX7ZSG9Q7TW8TW3Kp3BUSqgFWBLgL4PJ+Blag==
+
 merge2@^1.3.0, merge2@^1.4.1:
   version "1.4.1"
   resolved "https://registry.npmjs.org/merge2/-/merge2-1.4.1.tgz"
@@ -1948,10 +2019,22 @@ minimatch@^3.0.4, minimatch@^3.0.5, minimatch@^3.1.2:
   dependencies:
     brace-expansion "^1.1.7"
 
+minimatch@^9.0.1:
+  version "9.0.3"
+  resolved "https://registry.npmjs.org/minimatch/-/minimatch-9.0.3.tgz"
+  integrity sha512-RHiac9mvaRw0x3AYRgDC1CxAP7HTcNrrECeA8YYJeWnpo+2Q5CegtZjaotWTWxDG3UeGA1coE05iH1mPjT/2mg==
+  dependencies:
+    brace-expansion "^2.0.1"
+
 minimist@^1.2.0, minimist@^1.2.6:
   version "1.2.8"
   resolved "https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz"
   integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
+
+"minipass@^5.0.0 || ^6.0.2 || ^7.0.0":
+  version "7.0.4"
+  resolved "https://registry.npmjs.org/minipass/-/minipass-7.0.4.tgz"
+  integrity sha512-jYofLM5Dam9279rdkWzqHozUo4ybjdZmCsDHePy5V/PbBcVMiSZR97gmAy45aqi8CK1lG2ECd356FU86avfwUQ==
 
 ms@^2.1.1, ms@2.1.2:
   version "2.1.2"
@@ -1977,29 +2060,28 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-next@^14.0.4:
-  version "14.0.4"
-  resolved "https://registry.npmjs.org/next/-/next-14.0.4.tgz"
-  integrity sha512-qbwypnM7327SadwFtxXnQdGiKpkuhaRLE2uq62/nRul9cj9KhQ5LhHmlziTNqUidZotw/Q1I9OjirBROdUJNgA==
+next@^14.1.0:
+  version "14.1.0"
+  resolved "https://registry.npmjs.org/next/-/next-14.1.0.tgz"
+  integrity sha512-wlzrsbfeSU48YQBjZhDzOwhWhGsy+uQycR8bHAOt1LY1bn3zZEcDyHQOEoN3aWzQ8LHCAJ1nqrWCc9XF2+O45Q==
   dependencies:
-    "@next/env" "14.0.4"
+    "@next/env" "14.1.0"
     "@swc/helpers" "0.5.2"
     busboy "1.6.0"
-    caniuse-lite "^1.0.30001406"
+    caniuse-lite "^1.0.30001579"
     graceful-fs "^4.2.11"
     postcss "8.4.31"
     styled-jsx "5.1.1"
-    watchpack "2.4.0"
   optionalDependencies:
-    "@next/swc-darwin-arm64" "14.0.4"
-    "@next/swc-darwin-x64" "14.0.4"
-    "@next/swc-linux-arm64-gnu" "14.0.4"
-    "@next/swc-linux-arm64-musl" "14.0.4"
-    "@next/swc-linux-x64-gnu" "14.0.4"
-    "@next/swc-linux-x64-musl" "14.0.4"
-    "@next/swc-win32-arm64-msvc" "14.0.4"
-    "@next/swc-win32-ia32-msvc" "14.0.4"
-    "@next/swc-win32-x64-msvc" "14.0.4"
+    "@next/swc-darwin-arm64" "14.1.0"
+    "@next/swc-darwin-x64" "14.1.0"
+    "@next/swc-linux-arm64-gnu" "14.1.0"
+    "@next/swc-linux-arm64-musl" "14.1.0"
+    "@next/swc-linux-x64-gnu" "14.1.0"
+    "@next/swc-linux-x64-musl" "14.1.0"
+    "@next/swc-win32-arm64-msvc" "14.1.0"
+    "@next/swc-win32-ia32-msvc" "14.1.0"
+    "@next/swc-win32-x64-msvc" "14.1.0"
 
 node-releases@^2.0.13:
   version "2.0.13"
@@ -2150,6 +2232,14 @@ path-parse@^1.0.7:
   version "1.0.7"
   resolved "https://registry.npmjs.org/path-parse/-/path-parse-1.0.7.tgz"
   integrity sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==
+
+path-scurry@^1.10.1:
+  version "1.10.1"
+  resolved "https://registry.npmjs.org/path-scurry/-/path-scurry-1.10.1.tgz"
+  integrity sha512-MkhCqzzBEpPvxxQ71Md0b1Kk51W01lrYvlMzSUaIzNsODdd7mqhiimSZlr+VegAz5Z6Vzt9Xg2ttE//XBhH3EQ==
+  dependencies:
+    lru-cache "^9.1.1 || ^10.0.0"
+    minipass "^5.0.0 || ^6.0.2 || ^7.0.0"
 
 path-type@^4.0.0:
   version "4.0.0"
@@ -2443,6 +2533,11 @@ side-channel@^1.0.4:
     get-intrinsic "^1.0.2"
     object-inspect "^1.9.0"
 
+signal-exit@^4.0.1:
+  version "4.1.0"
+  resolved "https://registry.npmjs.org/signal-exit/-/signal-exit-4.1.0.tgz"
+  integrity sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==
+
 slash@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/slash/-/slash-3.0.0.tgz"
@@ -2457,6 +2552,33 @@ streamsearch@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/streamsearch/-/streamsearch-1.1.0.tgz"
   integrity sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==
+
+"string-width-cjs@npm:string-width@^4.2.0":
+  version "4.2.3"
+  resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
+  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
+  dependencies:
+    emoji-regex "^8.0.0"
+    is-fullwidth-code-point "^3.0.0"
+    strip-ansi "^6.0.1"
+
+string-width@^4.1.0:
+  version "4.2.3"
+  resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
+  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
+  dependencies:
+    emoji-regex "^8.0.0"
+    is-fullwidth-code-point "^3.0.0"
+    strip-ansi "^6.0.1"
+
+string-width@^5.0.1, string-width@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.npmjs.org/string-width/-/string-width-5.1.2.tgz"
+  integrity sha512-HnLOCR3vjcY8beoNLtcjZ5/nxn2afmME6lhrDrebokqMap+XbeW8n9TXpPDOqdGK5qcI3oT0GKTW6wC7EMiVqA==
+  dependencies:
+    eastasianwidth "^0.2.0"
+    emoji-regex "^9.2.2"
+    strip-ansi "^7.0.1"
 
 string.prototype.matchall@^4.0.8:
   version "4.0.10"
@@ -2500,12 +2622,26 @@ string.prototype.trimstart@^1.0.7:
     define-properties "^1.2.0"
     es-abstract "^1.22.1"
 
-strip-ansi@^6.0.1:
+"strip-ansi-cjs@npm:strip-ansi@^6.0.1":
   version "6.0.1"
   resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
   dependencies:
     ansi-regex "^5.0.1"
+
+strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.1.tgz"
+  integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
+  dependencies:
+    ansi-regex "^5.0.1"
+
+strip-ansi@^7.0.1:
+  version "7.1.0"
+  resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-7.1.0.tgz"
+  integrity sha512-iq6eVVI64nQQTRYq2KtEg2d2uU7LElhTJwsH4YzIHZshxlgZms/wIc4VoDQTlG/IvVIrBKG06CrZnp0qv7hkcQ==
+  dependencies:
+    ansi-regex "^6.0.1"
 
 strip-bom@^3.0.0:
   version "3.0.0"
@@ -2633,24 +2769,24 @@ tslib@^2.4.0:
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.6.2.tgz"
   integrity sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==
 
-tsparticles@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.npmjs.org/tsparticles/-/tsparticles-3.0.3.tgz"
-  integrity sha512-chClgQd4ePebjMk0UtK91ELPsOCcA7pBvDrzb54Yyzy66S5Ksa8oEhuepCfVAREyrAzn0YVuEue07SXvWXS88Q==
+tsparticles@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/tsparticles/-/tsparticles-3.1.0.tgz"
+  integrity sha512-fYgcOuZrgRXiER5GZX1NCtAFTwmR5gJiN8DVRO+cLjWDAP4ZE+aJlLb0bjM2nn4RQ8ABfxrB5hrTDVi8Mz8hkQ==
   dependencies:
-    "@tsparticles/engine" "^3.0.3"
-    "@tsparticles/interaction-external-trail" "^3.0.3"
-    "@tsparticles/plugin-absorbers" "^3.0.3"
-    "@tsparticles/plugin-emitters" "^3.0.3"
-    "@tsparticles/plugin-emitters-shape-circle" "^3.0.3"
-    "@tsparticles/plugin-emitters-shape-square" "^3.0.3"
-    "@tsparticles/shape-text" "^3.0.3"
-    "@tsparticles/slim" "^3.0.3"
-    "@tsparticles/updater-destroy" "^3.0.3"
-    "@tsparticles/updater-roll" "^3.0.3"
-    "@tsparticles/updater-tilt" "^3.0.3"
-    "@tsparticles/updater-twinkle" "^3.0.3"
-    "@tsparticles/updater-wobble" "^3.0.3"
+    "@tsparticles/engine" "^3.1.0"
+    "@tsparticles/interaction-external-trail" "^3.1.0"
+    "@tsparticles/plugin-absorbers" "^3.1.0"
+    "@tsparticles/plugin-emitters" "^3.1.0"
+    "@tsparticles/plugin-emitters-shape-circle" "^3.1.0"
+    "@tsparticles/plugin-emitters-shape-square" "^3.1.0"
+    "@tsparticles/shape-text" "^3.1.0"
+    "@tsparticles/slim" "^3.1.0"
+    "@tsparticles/updater-destroy" "^3.1.0"
+    "@tsparticles/updater-roll" "^3.1.0"
+    "@tsparticles/updater-tilt" "^3.1.0"
+    "@tsparticles/updater-twinkle" "^3.1.0"
+    "@tsparticles/updater-wobble" "^3.1.0"
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
@@ -2743,14 +2879,6 @@ util-deprecate@^1.0.2:
   resolved "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
 
-watchpack@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.npmjs.org/watchpack/-/watchpack-2.4.0.tgz"
-  integrity sha512-Lcvm7MGST/4fup+ifyKi2hjyIAwcdI4HRgtvTpIUxBRhB+RFtUh8XtDOxUfctVCnhVi+QQj49i91OyvzkJl6cg==
-  dependencies:
-    glob-to-regexp "^0.4.1"
-    graceful-fs "^4.1.2"
-
 which-boxed-primitive@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/which-boxed-primitive/-/which-boxed-primitive-1.0.2.tgz"
@@ -2807,6 +2935,24 @@ which@^2.0.1:
   integrity sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
   dependencies:
     isexe "^2.0.0"
+
+"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz"
+  integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
+  dependencies:
+    ansi-styles "^4.0.0"
+    string-width "^4.1.0"
+    strip-ansi "^6.0.0"
+
+wrap-ansi@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-8.1.0.tgz"
+  integrity sha512-si7QWI6zUMq56bESFvagtmzMdGOtoxfR+Sez11Mobfc7tm+VkUckk9bW2UeffTGVUbOksxmSw0AA2gs8g71NCQ==
+  dependencies:
+    ansi-styles "^6.1.0"
+    string-width "^5.0.1"
+    strip-ansi "^7.0.1"
 
 wrappy@1:
   version "1.0.2"

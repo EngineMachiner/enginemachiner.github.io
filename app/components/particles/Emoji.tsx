@@ -7,6 +7,8 @@ export interface EmojiInterface { [ key: string ]: string[] }
 
 const emojiOptions: ISourceOptions = {
 
+    detectRetina: false,
+
     particles: {
 
         move: {
@@ -28,6 +30,6 @@ export default function EmojiParticles() {
 
     const particlesLoaded = async ( container?: Container ) => { emojiContainer = container }
 
-    return <Particles id="emojiParticles" particlesLoaded={particlesLoaded} options={emojiOptions}/>
+    return <Particles className="emojiParticles" particlesLoaded={particlesLoaded} options={emojiOptions}/>
 
 }

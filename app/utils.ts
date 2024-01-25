@@ -2,16 +2,16 @@
 import localFont from "next/font/local"
 
 export const isMobile = () => {
-    return window.matchMedia( "screen and (min-width: 360px) and (orientation: portrait)" ).matches
+    return window.matchMedia( "(hover: none) and (pointer: coarse)" ).matches
 }
 
-export const titleFont = localFont( {
-    src: '../fonts/LoftygoalsRegular-9Y5Xy.otf'
-} )
+export const isPortrait = () => {
+    return window.matchMedia( "(orientation: portrait)" ).matches
+}
 
-export const bodyFont = localFont( {
-    src: '../fonts/NotoSerif-Regular.ttf'
-} )
+export const titleFont = localFont( { src: '../fonts/LoftygoalsRegular-9Y5Xy.otf' } )
+export const bodyFont = localFont( { src: '../fonts/NotoSerif-Regular.ttf' } )
+export const infoFont = localFont( { src: '../fonts/JetBrainsMono-Medium.ttf' } )
 
 export function randomUntil( n2: number ) { return Math.floor( Math.random() * n2 ) }
 
