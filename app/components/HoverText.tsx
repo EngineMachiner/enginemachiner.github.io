@@ -1,7 +1,8 @@
+
 'use client'
 
 import { ISourceOptions } from "@tsparticles/engine";
-import { randomUntil, randomValue } from "../utils";
+import { isPortrait, randomValue } from "../utils";
 import { getEmojiContainer } from "./particles/Emoji"
 import { isMobile } from "../utils";
 import { useWindowSize, WindowSize } from "../clientUtils";
@@ -30,13 +31,15 @@ function clearTimeouts() {
 
 function spawnParticles( emojis: any,    dim: WindowSize ) {
 
-    const container = getEmojiContainer();      const particles = container?.particles
+    const container = getEmojiContainer()
     
-    const width = dim.width;        const height = dim.height
+    const particles = container?.particles
+    
+    const { width, height } = dim
 
-    let num = 10;     particles?.clear();       clearTimeouts()
-    
-    if ( isMobile() ) num = 5
+    let num = 10;       if ( width < height ) num = 5
+
+    particles?.clear();       clearTimeouts()
 
     // TODO: Add particle with a static angle.
 
@@ -44,7 +47,9 @@ function spawnParticles( emojis: any,    dim: WindowSize ) {
 
         let size = Math.random() * 25 + 20;       let time = i * size * 4
         
-        if ( isMobile() && width < height ) time *= 2
+        if ( width < height ) time *= 2
+
+        if ( !isPortrait() ) size *= width / 1920
 
         const pos = { x: getX( width, size ), y: height + size }
 
@@ -75,12 +80,12 @@ export default function HoverText(props: Props) {
     
     }
 
-    return (
-        <p 
-            className={ className + ' transition-colors hover:text-cyan-400 active:text-cyan-400' }
-            onTouchStart={ () => spawnParticles( emojis, windowSize ) }
-            onMouseEnter={onMouseEnter}
-        >{text}</p>
-    )
+    const component = <p className={ className + ' transition-colors hover:text-cyan-400 active:text-cyan-400' }
+    onTouchStart={ () => spawnParticles( emojis, windowSize ) }
+    onMouseEnter={onMouseEnter}>
+        {text}
+    </p>
+
+    return component
 
 }

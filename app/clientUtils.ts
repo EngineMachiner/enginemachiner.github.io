@@ -1,3 +1,4 @@
+
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -17,6 +18,7 @@ export function useWindowSize() {
         function handleResize() { setWindowSize( { width: window.innerWidth,   height: window.innerHeight } ) }
 
         window.addEventListener( 'resize', handleResize )
+        
         return () => window.removeEventListener( 'resize', handleResize )
     
     } )

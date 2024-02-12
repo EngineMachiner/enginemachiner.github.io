@@ -1,44 +1,44 @@
+
 'use client'
 
-import { useEffect, useState } from 'react';
+import { CSSProperties, useEffect, useState } from 'react';
 import { LanguageProps } from './Language';
 
-export default function LanguageButton( props: LanguageProps ) {
-    
-    const { metadata, languageState, languagesData } = props
+const style: CSSProperties = {
+    right: '1.5vh',     left: 'auto',       marginTop: '1.3vh'
+}
 
-    const [ language, setLanguage ] = languageState
+export default function LanguageButton( { languageState, languagesData }: LanguageProps ) {
 
     const data = languagesData
+
+    const [ language, setLanguage ] = languageState
     
     let [ i, setIndex ] = useState(0);      let [ title, setTitle ] = useState("")
 
-    function updateTitles() {
+    function updateTitle() {
 
-        if ( language.name == undefined || data == undefined ) return
+        const name = language.name
 
+        if ( name == undefined || data == undefined ) return
 
-        const nextTitle = language.name.replace(".json", "").toUpperCase()
+        const title = name.replace(".json", '').toUpperCase()
 
-        setTitle(nextTitle)
-
-
-        metadata.title = data.metatitle
-
+        setTitle(title)
 
     }
 
-    useEffect( updateTitles, [ language, metadata, data ] )
+    useEffect( updateTitle, [ language, data ] )
 
-    function updateLanguage( nextLang: string, nextIndex?: number ) {
+    function updateLanguage( langName: string, index?: number ) {
 
         for ( const key in data ) {
 
-            if ( !key.startsWith(nextLang) ) continue
+            if ( !key.startsWith(langName) ) continue
 
             setLanguage( { name: key,   data: data[key] } )
             
-            if ( nextIndex != undefined ) { setIndex(nextIndex); break }
+            if ( index != undefined ) { setIndex(index); break }
 
             const i = Object.keys(data).findIndex( (v) => { return v == key } )
 
@@ -62,14 +62,14 @@ export default function LanguageButton( props: LanguageProps ) {
 
     function setNextLanguage() {
 
-        const files = Object.keys(data);    const languagesNum = files.length
+        const files = Object.keys(data);    const n = files.length
 
-        i = ( i + 1 ) % languagesNum;       const next = files[i]
+        i = ( i + 1 ) % n;       const next = files[i]
 
         updateLanguage( next, i )
 
     }
 
-    return <button className="langButton" onClick={setNextLanguage}>{title}</button>
+    return <button className="button" style={style} onClick={setNextLanguage}>{title}</button>
 
 }

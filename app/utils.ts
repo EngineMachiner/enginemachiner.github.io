@@ -9,9 +9,9 @@ export const isPortrait = () => {
     return window.matchMedia( "(orientation: portrait)" ).matches
 }
 
-export const titleFont = localFont( { src: '../fonts/LoftygoalsRegular-9Y5Xy.otf' } )
-export const bodyFont = localFont( { src: '../fonts/NotoSerif-Regular.ttf' } )
-export const infoFont = localFont( { src: '../fonts/JetBrainsMono-Medium.ttf' } )
+export const titleFont = localFont( { src: '../fonts/LoftygoalsRegular-9Y5Xy.otf', preload: false } )
+export const bodyFont = localFont( { src: '../fonts/NotoSerif-Regular.ttf', preload: false } )
+export const infoFont = localFont( { src: '../fonts/JetBrainsMono-Medium.ttf', preload: false } )
 
 export function randomUntil( n2: number ) { return Math.floor( Math.random() * n2 ) }
 

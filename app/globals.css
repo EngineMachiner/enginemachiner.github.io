@@ -10,92 +10,31 @@
 
 body { color: rgb( var( --foreground-rgb ) ); }
 
-h1 { font-size: 6vh;    padding: 3vh 0 }
-p { font-size: 2.5vh }
+h1 { font-size: 3.5vw;    padding: 3vh 0 }
 
-.bgCreditsBox {
-    margin-left: 20px;  position: absolute;
-    top: auto;          bottom: 2.5vh;
+p { font-size: 1.25vw }
+
+.main { height: 100vh; width: 100% }
+
+.center {
+    display: flex; 
+    align-items: center;    justify-content: center
 }
 
-.bgCredits {
-    height: fit-content;
-    font-size: 2.15vh;          display: inline;   
-    white-space: pre-wrap
-}
-
-.main { background-color: '#000' }
-
-.main, .imageContainer { height: 100vh; width: 100% }
-.backgroundImage { object-fit: cover }
-
-.bodyContainer {
-
-    --height: 85%;      position: relative;
-    
-    height: var( --height );
-
-    --top: calc( calc( 100% - var( --height ) ) * 0.5 );
-    
-    top: var( --top );
-
-}
-
-.quadBackground { opacity: 0.75; }
-
-.quadBackground, .asciiArtBox { background-color: rgb( var( --background-start-rgb ) ); }
-
-.quadBackground, .asciiArtBox, .asciiArt { position: absolute; }
-
-.asciiArtBox { opacity: 0.5 }
-
-.asciiArtBox, .asciiArt {
-
-    --width: 55vh;   width: 55vh;   z-index: -1;
-    height: 100%;    margin-left: calc( 100% - var( --width ) );
-
-}
-
-.asciiArt, .asciiArtMobile { font-size: 1vh; padding: 4vh; color: #009500 }
-.asciiArtMobile { display: none }
-
-.textBox { padding: 1.5vh 3vw;  margin-right: 55vh }
-
-.aboutText { white-space: pre }
-
-.break { margin-bottom: 5px }
-
-.langButton {
-    right: 0;               left: auto;
-    position: absolute;     margin: 1.5vh;
-    width: 4.5vh;           height: 4.75vh;
-    border-radius: 1.5vh;   color: #04491d;
-    font-size: 2.25vh;      font-weight: bold;
+.button {
+    position: absolute;
+    width: 4.5vh;                   height: 4.75vh;
+    border-radius: 1.5vh;           color: #04491d;
+    font-size: 2.25vh;              font-weight: bold;
     background-color: #1dc159;
 }
 
 @media (orientation: portrait) {
 
-    .main, .imageContainer { height: 400vh }
-    .textBox { padding: 0 3vh;  margin-right: 0 }
-    .imageContainer { min-width: 800px; right: 0px }
-    .break { margin-bottom: 20px }
+    h1 { font-size: 6vh }       p { font-size: 2.5vh }
 
-    .asciiArtBox, .asciiArt { display: none }
-    .asciiArtMobile {
-        padding: 0;     padding-top: 4vh;
-        font-size: 0.8vh;   display: block;
-    }
+    .main { height: 400vh }
 
-    .langButton { width: 7vh;   height: 7.5vh;      font-size: 3.5vh }
-
-    .bgCreditsBox { bottom: 20vh }
-
-}
-
-@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
-
-    .bgCreditsBox { display: flex }
-    .break { margin-bottom: -10px }
+    .button { width: 7vh;   height: 7.5vh;      font-size: 3.5vh }
 
 }

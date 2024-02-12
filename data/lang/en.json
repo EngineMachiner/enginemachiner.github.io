@@ -1,4 +1,5 @@
 {
+
     "metatitle": "My website",
     "title1": "Welcome to my webpage!",
     "body1": "Hello, my name is Manuel, I am colombian and I like to develop software.",
@@ -11,8 +12,11 @@
     "bgCredits": "Background animation made by ",
     "keywords": {
         "Hello": "wave.png",        "colombian": "flag-co.png",
-        "software": "software",     "art, design and creativity": "art",
+        "software": "software",     "art, design creativity.": "art",
         "music": "music",     "videogames": "videogames",   "swim": "sport",
         "movies": "movies",    "Spanish": "es.png",      "English": "us.png"
-    }
+    },
+
+    "copyAlert": "Copied!"
+
 }

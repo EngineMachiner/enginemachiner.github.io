@@ -1,7 +1,8 @@
 
-import HoverText from "./HoverText"
-import { LanguageData, LanguageInterface } from "./language/Language";
-import { EmojiInterface } from "./particles/Emoji";
+import HoverText from "../HoverText"
+import { LanguageData, LanguageInterface } from "../language/Language";
+import { EmojiInterface } from "../particles/Emoji";
+import styles from './BodyParser.module.css'
 
 let keywords: LanguageData;     let emojis: EmojiInterface
 
@@ -24,8 +25,8 @@ function getKeywordEmojis(key: string) {
 function getChild( className: string, sentence: string ) {
 
     const children = [];        let words = sentence.split(" ")
-    
-    let i = 0;    const last = words[ words.length - 1 ]
+
+    let i = 0;      const last = words[ words.length - 1 ]
 
     for ( const word of words ) {
 
@@ -37,9 +38,11 @@ function getChild( className: string, sentence: string ) {
 
         for ( const key in keywords ) {
     
-            console.log( word + ': ' + key )
+            const isLong = ( ' ' + key ).includes( ' ' + word )
 
-            isKeyword = text.includes(key);   if ( !isKeyword ) continue
+            isKeyword = text.includes(key) || isLong
+            
+            if ( !isKeyword ) continue
 
             const emojis = getKeywordEmojis(key)
 
@@ -53,7 +56,7 @@ function getChild( className: string, sentence: string ) {
 
         if ( !isKeyword ) children.push( <p className={className} key={ i++ }>{ text + ' ' }</p> )
 
-        if (isLast) children.push( <p className="break" key={ i++ }/> )
+        if (isLast) children.push( <p key={ i++ } className={ styles.break }/> )
 
     }
 
@@ -65,16 +68,16 @@ function getChild( className: string, sentence: string ) {
 
 interface Props { 
     className: string;      body: string[];
-    language: LanguageInterface;     emojiImages: EmojiInterface
+    language: LanguageInterface;     emojis: EmojiInterface
 }
 
 export default function BodyParser( props: Props ) {
 
     const children = []
     
-    const { className, body, language, emojiImages } = props
+    const { className, body, language, emojis: paths } = props
 
-    keywords = language.data?.keywords;     emojis = emojiImages
+    keywords = language.data?.keywords;     emojis = paths
 
     for ( const sentence of body ) children.push( getChild( className, sentence ) )
 

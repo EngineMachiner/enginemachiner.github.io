@@ -1,10 +1,11 @@
+
 import { promises as fs } from 'fs'
 import { LanguageData } from './components/language/Language'
 import { EmojiInterface } from './components/particles/Emoji'
 
 type readFunction = ( directory: string, name: string ) => void | Promise<void>
 
-async function readContent( path: string, set: readFunction ) {
+export async function readContent( path: string, set: readFunction ) {
 
     const directory = process.cwd() + path
 
@@ -12,9 +13,25 @@ async function readContent( path: string, set: readFunction ) {
 
 }
 
+export const loadingIcons: string[] = []
+
+async function readLoadingIcons() {
+
+    const iconsDirectory = /loading/
+
+    async function set( _: string, name: string ) {
+
+        loadingIcons.push( iconsDirectory + name )
+
+    }
+
+    await readContent( '/public' + iconsDirectory, set )
+
+}
+
 export const languagesData: LanguageData = {}
 
-async function readLanguages() {
+export async function readLanguages() {
 
     async function set( directory: string, name: string ) {
 
@@ -42,7 +59,7 @@ async function readArt() {
 
 }
 
-export const emojiImages: EmojiInterface = {}
+export const emojis: EmojiInterface = {}
 
 async function readEmojis() {
 
@@ -50,7 +67,7 @@ async function readEmojis() {
 
         if ( name.endsWith('.png') ) return
 
-        emojiImages[name] = await fs.readdir( directory + name )
+        emojis[name] = await fs.readdir( directory + name )
 
     }
 
@@ -61,5 +78,7 @@ async function readEmojis() {
 export async function readData() {
 
     await readLanguages();    await readEmojis();   await readArt()
+    
+    await readLoadingIcons()
     
 }

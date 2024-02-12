@@ -1,0 +1,16 @@
+
+.main { height: 100% }
+.icon { width: 10vw;     height: 10vw }
+
+@media (orientation: portrait) {
+
+    .main {
+
+        align-items: normal;    justify-content: center;
+        top: 5%;                height: auto
+
+    }
+
+    .icon { width: 50vw;     height: 50vw }
+
+}

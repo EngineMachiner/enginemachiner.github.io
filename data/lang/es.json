@@ -1,4 +1,5 @@
 {
+
     "metatitle": "Mi sitio web",
     "title1": "¡Bievenido a mi página!",
     "body1": "Hola, mi nombre es Manuel, soy colombiano y me gusta el desarrollo de software.",
@@ -11,8 +12,11 @@
     "bgCredits": "Animación de fondo hecha por ",
     "keywords": {
         "Hola": "wave.png",         "colombiano": "flag-co.png",
-        "software": "software",     "arte, el diseño y la creatividad": "art",
-        "musica": "music",     "videojuegos": "videogames",   "nadar": "sport",
-        "peliculas": "movies",    "Español": "es.png",      "Inglés": "us.png"
-    }
+        "software": "software",     "arte, diseño creatividad.": "art",
+        "musica": "music",          "videojuegos": "videogames",                "nadar": "sport",
+        "peliculas": "movies",      "Español": "es.png",                        "Inglés": "us.png"
+    },
+
+    "copyAlert": "¡Copiado!"
+
 }

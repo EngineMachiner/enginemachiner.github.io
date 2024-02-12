@@ -1,0 +1,10 @@
+
+.break { margin-bottom: 0.5vw }
+
+@media (orientation: portrait) { .break { margin-bottom: 20px } }
+
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+
+    .break { margin-bottom: -10px }
+
+}

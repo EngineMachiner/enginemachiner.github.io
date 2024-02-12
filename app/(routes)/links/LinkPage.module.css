@@ -1,0 +1,44 @@
+
+.main {
+    display: flex;
+    align-items: center;    justify-content: center 
+}
+
+.iconsBg {
+
+    display: inline-grid;
+
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
+
+    justify-items: center;      align-items: center;
+
+    position: absolute;         padding: 5vh;
+    width: 40%;                 height: 50%;
+    border-radius: 1.5vh;       background-color: #1dc159;
+
+}
+
+.image { width: 8vw;   height: 8vw }
+
+.copyAlert {
+    
+    width: auto;        height: auto;       padding: 1.25vh 1.5vh;
+
+}
+
+@media (orientation: portrait) {
+
+    .main { align-items: normal }
+
+    .iconsBg { 
+        top: 13vh;          grid-template-columns: auto;
+        padding: 25px;      width: 50vw;
+        height: 70vh;
+    }
+
+    .image { width: 11vh;   height: 11vh }
+
+    .copyAlert { font-size: 2vh }
+
+}

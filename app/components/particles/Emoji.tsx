@@ -1,3 +1,4 @@
+
 'use client'
 
 import Particles from "@tsparticles/react";
@@ -7,14 +8,14 @@ export interface EmojiInterface { [ key: string ]: string[] }
 
 const emojiOptions: ISourceOptions = {
 
+    // Set to false because there were scaling issues.
     detectRetina: false,
 
     particles: {
 
         move: {
-            direction: "top",
-            enable: true,   speed: 7,
-            straight: true,
+            direction: "top",       enable: true,
+            speed: 7,               straight: true,
             outModes: "destroy"
         },
 
