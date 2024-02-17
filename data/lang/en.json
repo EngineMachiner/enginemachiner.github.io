@@ -3,7 +3,7 @@
     "metatitle": "My website",
     "title1": "Welcome to my webpage!",
     "body1": "Hello, my name is Manuel, I am colombian and I like to develop software.",
-    "body2": "I enjoy art, design and creativity. I love music and I like to play music from time to time.",
+    "body2": "I enjoy art, design and creativity. I love music and I like to play instruments and songs from time to time.",
     "body3": "I also like playing videogames. Specially rhythm games.",
     "body4": "I like to swim and sometimes I watch movies.",
     "body5": "I speak Spanish and English.",
@@ -13,6 +13,7 @@
     "keywords": {
         "Hello": "wave.png",        "colombian": "flag-co.png",
         "software": "software",     "art, design creativity.": "art",
+        "instruments and songs": "music",
         "music": "music",     "videogames": "videogames",   "swim": "sport",
         "movies": "movies",    "Spanish": "es.png",      "English": "us.png"
     },
