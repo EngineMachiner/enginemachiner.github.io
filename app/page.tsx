@@ -5,6 +5,7 @@ import ParticlesInitializer from './components/particles/Engine';
 import { asciiArt, emojis, languagesData, loadingIcons, readData } from "./dataReading";
 import Loading from "@/app/components/loading/Loading";
 import { randomValue } from "./utils";
+import { Suspense } from 'react';
 
 export const metadata: Metadata = {
     title: 'Engine\'s - About',
@@ -19,9 +20,11 @@ export default async function Home() {
 
         <ParticlesInitializer/>
 
-        <Loading icon={ randomValue(loadingIcons) }>
-            <About ascii={asciiArt} emojis={emojis} languagesData={languagesData}/>
-        </Loading>
+        <Suspense>
+            <Loading icon={ randomValue(loadingIcons) }>
+                <About ascii={asciiArt} emojis={emojis} languagesData={languagesData}/>
+            </Loading>
+        </Suspense>
 
     </> )
 
