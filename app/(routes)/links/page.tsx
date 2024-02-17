@@ -6,8 +6,11 @@ import HomeButton from './components/HomeButton';
 import { languagesData, readLanguages } from '@/app/dataReading';
 import LanguageLoader from './components/LanguageLoader';
 import { Suspense } from 'react';
+import { getFormerMetadata } from '@/app/page';
 
-export const metadata: Metadata = { title: 'Engine\'s - Links' }
+export const metadata: Metadata = getFormerMetadata()
+
+metadata.title = 'Engine\'s - Links'
 
 export default async function LinksPage() {
 

@@ -6,13 +6,14 @@ import { asciiArt, emojis, languagesData, loadingIcons, readData } from "./dataR
 import Loading from "@/app/components/loading/Loading";
 import { randomValue } from "./utils";
 import { Suspense } from 'react';
-import Head from 'next/head';
 
 export const metadata: Metadata = {
     title: 'Engine\'s - About',
     description: 'Manuel P / Engine_Machiner\'s website.' ,
     icons: '/icon.png'
 }
+
+export function getFormerMetadata() { return metadata }
 
 export default async function Home() {
 
