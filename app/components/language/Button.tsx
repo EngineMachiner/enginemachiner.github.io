@@ -50,7 +50,9 @@ export default function LanguageButton( { languageState, languagesData }: Langua
 
     function setNavigatorLanguage() {
 
-        if ( language.data != undefined || data == undefined ) return
+        if ( language.data != undefined ) return
+
+        updateLanguage('en') // Default.
 
         let browserLanguage = navigator.language.substring(0, 2)
 
