@@ -14,10 +14,10 @@ interface CopyClickData {
     src: string;    toCopy: string;     priority?: boolean
 }
 
-/** Copies to clipboard. NextJS HTTPS issue (on mobile). */
+/** Copies to clipboard. Webpage has to be HTTPS. */
 function copy( toCopy: string ) {
 
-    setAnimate(true);   navigator.clipboard.writeText(toCopy)
+    setAnimate(true);   navigator.clipboard.writeText(toCopy).then()
     
 }
 
