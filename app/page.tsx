@@ -6,6 +6,7 @@ import { asciiArt, emojis, languagesData, loadingIcons, readData } from "./dataR
 import Loading from "@/app/components/loading/Loading";
 import { randomValue } from "./utils";
 import { Suspense } from 'react';
+import Head from 'next/head';
 
 export const metadata: Metadata = {
     title: 'Engine\'s - About',
@@ -17,6 +18,8 @@ export default async function Home() {
     await readData()
 
     return ( <>
+
+        <Head><link rel='icon' href='/icon.png'/></Head>
 
         <ParticlesInitializer/>
 
