@@ -10,7 +10,8 @@ import Head from 'next/head';
 
 export const metadata: Metadata = {
     title: 'Engine\'s - About',
-    description: 'Manuel P / Engine_Machiner\'s website.' 
+    description: 'Manuel P / Engine_Machiner\'s website.' ,
+    icons: '/icon.png'
 }
 
 export default async function Home() {
@@ -18,8 +19,6 @@ export default async function Home() {
     await readData()
 
     return ( <>
-
-        <Head><link rel='icon' href='/icon.png'/></Head>
 
         <ParticlesInitializer/>
 
