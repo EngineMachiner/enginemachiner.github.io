@@ -15,9 +15,11 @@ export default async function LinksPage() {
 
     return ( <div className='overflow-hidden absolute w-full h-full'>
 
-        <Suspense><LanguageLoader languagesData={languagesData}/></Suspense>
-        <div className="brightness-50"><Background blur/></div>
-        <HomeButton/><ActionBlock/>
+        <Suspense>
+            <LanguageLoader languagesData={languagesData}/>
+            <div className="brightness-50"><Background blur/></div>
+            <HomeButton/><ActionBlock/>
+        </Suspense>
 
     </div> )
 
