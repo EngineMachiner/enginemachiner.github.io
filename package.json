@@ -13,6 +13,7 @@
         "@tsparticles/react": "^3.0.0",
         "animate.css": "^4.1.1",
         "braces": "^3.0.3",
+        "cross-spawn": "^7.0.5",
         "framer-motion": "^11.11.17",
         "micromatch": "^4.0.8",
         "next": "^15.0.3",
