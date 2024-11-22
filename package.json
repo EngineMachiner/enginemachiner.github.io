@@ -9,6 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@eslint/plugin-kit": "^0.2.3",
         "@tsparticles/engine": "^3.6.0",
         "@tsparticles/react": "^3.0.0",
         "animate.css": "^4.1.1",
