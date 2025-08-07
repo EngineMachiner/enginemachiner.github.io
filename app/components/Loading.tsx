@@ -43,7 +43,7 @@ export default function Loading( { children }: ChildrenProps ) {
 
     const assetsTree = useContext( TreeContext )!
 
-    const tree = assetsTree.loadingIcons;           const src = randomInTree(tree)
+    const tree = assetsTree.loadingIcons;           const [src] = useState( () => randomInTree(tree) )
 
     const video = <video src={src} preload="metadata" autoPlay loop muted/>
 
