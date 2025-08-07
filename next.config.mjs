@@ -1,7 +1,15 @@
 
-/** @type {import('next').NextConfig} */
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin("./i18n.ts");
+
+/** @type {import("next").NextConfig} */
+
+// Static exports are needed to deploy in Github Pages.
 
 const nextConfig = {
+
+    allowedDevOrigins: ["Put IP here."],
 
     /**
      * Enable static exports for the App Router.
@@ -16,8 +24,10 @@ const nextConfig = {
      *
      * @see https://nextjs.org/docs/app/api-reference/components/image#unoptimized
      */
-    images: { unoptimized: true }
+    images: { unoptimized: true },
+
+    reactStrictMode: true
 
 }
 
-export default nextConfig
+export default withNextIntl( nextConfig )

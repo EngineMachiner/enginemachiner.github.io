@@ -1,8 +1,0 @@
-
-.linksButton { right: 7vh;   left: auto;   margin-top: 1.3vh }
-
-@media (orientation: portrait) {
-
-    .linksButton { right: 1.5vh;    margin-top: 10vh }
-
-}

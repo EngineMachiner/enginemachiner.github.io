@@ -1,0 +1,36 @@
+
+@import "tailwindcss";
+
+:root { color-scheme: light dark }          body { color: white;        user-select: none }
+
+.button {
+    
+    width: 5vh;         height: 5vh;        cursor: pointer;        border-radius: 2vh;
+
+    font-size: 2.5vh;       font-weight: 700;       font-family: infoFont, infoFont Fallback
+
+}
+
+
+.textLink { color: var( --color-cyan-400 ) }
+
+.textLink:hover, .textLink:active { color: var( --color-lime-400 ) }
+
+
+.specialText { color: var( --color-amber-400 ) }
+
+.specialText:hover, .specialText:active { color: var( --color-cyan-400 ) }
+
+.button {
+    
+    background-color: var( --color-green-400 );     transition: background-color 0.3s ease-in-out
+
+}
+
+.button:hover, .button:active { background-color: var( --color-sky-400 ) }
+
+
+.textLink, .specialText { transition: color 0.3s ease-in-out }
+
+
+.contact { position: relative;        width: 25vmin;      height: 25vmin;       cursor: pointer }

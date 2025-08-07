@@ -1,0 +1,28 @@
+{
+
+    "metatitle": "My website - enginemachiner.github.io",
+
+    "title": "Welcome to my webpage!",          "credits": "Background animation made by {artist}.",        "copyMessage": "Copied!",
+
+    "body": [
+
+        [
+            { "text": "Hello!", "keyword": "Hello" }, { "text": "I'm Manuel. I'm a" }, { "text": "Colombian", "keyword": "colombia" },
+            { "text": "software developer.", "keyword": "software" },
+            
+            { "text": "In my free time I like to" }, { "text": "appreciate" }, { "text": "art, design", "keyword": "art" } , { "text": "and" } , { "text": "creativity.", "keyword": "art" },
+            { "text": "I often explore" }, { "text": "music", "keyword": "music" }, { "text": "just by" }, { "text": "listening to songs", "keyword": "music" }, { "text": "or" },
+            { "text": "playing", "keyword": "music" }, { "text": "them." },
+
+            { "text": "I'm also a" }, { "text": "game developer", "keyword": "gaming" }, { "text": "and" }, { "text": "videogames", "keyword": "gaming" }, { "text": "fan, especially of rhythm games." },
+            { "text": "Sometimes I go for a" }, { "text": "swim", "keyword": "swimming" }, { "text": "or stay home watching good" }, { "text": "movies or TV series. \n", "keyword": "movies" }
+        ],
+
+        [
+            { "text": "I speak" }, { "text": "English", "keyword": "English" }, { "text": "and" }, { "text": "Spanish.", "keyword": "Spanish" },
+            { "text": "I'd like to describe myself as a curious learner," }, { "text": "committed, determined, autonomous and recursive." }, { "text": "Always open to new experiences and opportunities." }
+        ]
+
+    ]
+
+}

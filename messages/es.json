@@ -1,0 +1,29 @@
+{
+
+    "metatitle": "Mi sitio web - enginemachiner.github.io",
+
+    "title": "¡Bienvenido a mi página!",         "credits": "Animación de fondo hecha por {artist}.",         "copyMessage": "¡Copiado!",
+
+    "body": [
+
+        [
+            { "text": "¡Hola!", "keyword": "Hello" }, { "text": "Soy Manuel. Soy un" }, { "text": "desarrollador de software", "keyword": "software" },
+            { "text": "colombiano.", "keyword": "colombia" },
+            
+            { "text": "En mi tiempo libre" }, { "text": "aprecio" }, { "text": "el arte, el diseño", "keyword": "art" } , { "text": "y" } , { "text": "la creatividad.", "keyword": "art" },
+            { "text": "A veces exploro" }, { "text": "la música", "keyword": "music" }, { "text": "simplemente" }, { "text": "escuchando canciones", "keyword": "music" }, { "text": "o" },
+            { "text": "interpretándolas.", "keyword": "music" },
+
+            { "text": "También soy" }, { "text": "un desarrollador de videojuegos", "keyword": "gaming" }, { "text": "y un fanático de" }, { "text": "los videojuegos,", "keyword": "gaming" }, { "text": "especialmente de los juegos de ritmo." },
+            { "text": "De vez en cuando me gusta" }, { "text": "nadar", "keyword": "swimming" }, { "text": "o quedarme en casa a ver" }, { "text": "películas o series de TV. \n", "keyword": "movies" }
+        ],
+
+        [
+            { "text": "Habló" }, { "text": "inglés", "keyword": "English" }, { "text": "y" }, { "text": "español.", "keyword": "Spanish" },
+            { "text": "Me describo como una persona curiosa," }, { "text": "comprometida, determinada," }, { "text": "autónoma y recursiva." },
+            { "text": "Siempre abierta a nuevas experiencias y oportunidades." }
+        ]
+
+    ]
+
+}
