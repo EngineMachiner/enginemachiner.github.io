@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useCallback, useContext, useEffect, useState } from "react";
 
 import { TreeContext } from "./TreeProvider";
+import { disableContextMenu } from "../client";
 import { ChildrenProps, randomInTree, sanitizePath } from "@/app/util";
 
 function preload( tree: any ) {
@@ -40,6 +41,8 @@ export default function Loading( { children }: ChildrenProps ) {
 
     const open = useCallback( () => setY("-100%"), [] );        useEffect( () => { setTimeout( open, 2000 ) } )
 
+    disableContextMenu()
+    
 
     const assetsTree = useContext( TreeContext )!
 
@@ -52,7 +55,7 @@ export default function Loading( { children }: ChildrenProps ) {
 
     const color = "bg-gradient-to-b from-indigo-500 to-red-500"
 
-    className = "h-screen grid place-items-center " + color;        div = <div className={className}>{div}</div>
+    className = "h-[100dvh] grid place-items-center " + color;        div = <div className={className}>{div}</div>
 
 
     className = "fixed w-screen z-20";          const images = Images()
