@@ -18,26 +18,3 @@ export function useWindowSize() {
     } )
 
 }
-
-export function useDisableContextMenu() {
-
-    useEffect( () => {
-
-        const onMenu = ( listener: MouseEvent ) => {
-
-            const target = listener.target
-
-            const isImage = target instanceof HTMLImageElement
-            const isVideo = target instanceof HTMLVideoElement
-
-            if ( isImage || isVideo ) listener.preventDefault() 
-
-        }
-
-        document.addEventListener( "contextmenu", onMenu )
-
-        return () => document.removeEventListener( "contextmenu", onMenu )
-
-    } )
-
-}

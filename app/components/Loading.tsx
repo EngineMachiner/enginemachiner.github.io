@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { useCallback, useContext, useEffect, useState } from "react";
 
 import { TreeContext } from "./TreeProvider";
-import { useDisableContextMenu } from "../client";
 import { ChildrenProps, randomInTree, sanitizePath } from "@/app/util";
 
 function preload( tree: any ) {
@@ -40,8 +39,6 @@ export default function Loading( { children }: ChildrenProps ) {
     const state = useState('0');        const [ y, setY ] = state
 
     const open = useCallback( () => setY("-100%"), [] );        useEffect( () => { setTimeout( open, 2000 ) } )
-
-    useDisableContextMenu()
     
 
     const assetsTree = useContext( TreeContext )!
