@@ -15,7 +15,8 @@
             { "text": "playing", "keyword": "music" }, { "text": "them." },
 
             { "text": "I'm also a" }, { "text": "game developer", "keyword": "gaming" }, { "text": "and" }, { "text": "videogames", "keyword": "gaming" }, { "text": "fan, especially of rhythm games." },
-            { "text": "Sometimes I go for a" }, { "text": "swim", "keyword": "swimming" }, { "text": "or stay home watching good" }, { "text": "movies or TV series. \n", "keyword": "movies" }
+            { "text": "Sometimes I go for a" }, { "text": "swim", "keyword": "swimming" }, { "text": "or stay home watching good" }, { "text": "movies", "keyword": "movies" }, { "text": "or" },
+            { "text": "TV series. \n", "keyword": "movies" }
         ],
 
         [

@@ -15,7 +15,8 @@
             { "text": "interpretándolas.", "keyword": "music" },
 
             { "text": "También soy" }, { "text": "un desarrollador de videojuegos", "keyword": "gaming" }, { "text": "y un fanático de" }, { "text": "los videojuegos,", "keyword": "gaming" }, { "text": "especialmente de los juegos de ritmo." },
-            { "text": "De vez en cuando me gusta" }, { "text": "nadar", "keyword": "swimming" }, { "text": "o quedarme en casa a ver" }, { "text": "películas o series de TV. \n", "keyword": "movies" }
+            { "text": "De vez en cuando me gusta" }, { "text": "nadar", "keyword": "swimming" }, { "text": "o quedarme en casa a ver" }, { "text": "películas", "keyword": "movies" }, { "text": "o" },
+            { "text": "series de TV. \n", "keyword": "movies" }
         ],
 
         [
