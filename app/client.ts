@@ -19,7 +19,7 @@ export function useWindowSize() {
 
 }
 
-export function disableContextMenu() {
+export function useDisableContextMenu() {
 
     useEffect( () => {
 
