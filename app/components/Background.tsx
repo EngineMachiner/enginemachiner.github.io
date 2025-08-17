@@ -26,11 +26,11 @@ export function Credits() {
 
 export default function Background( { blur }: { blur?: boolean } ) {
 
-    let className = "object-cover";           if (blur) className += " blur"
+    let className = "object-cover size-full";           if (blur) className += " blur"
 
-    let image = <Image className={className} src="/background.gif" alt="Background GIF" fill priority/>
+    let video = <video className={className} src="/background.webm" preload="metadata" autoPlay loop muted/>
 
-    image = <div className="fixed w-screen h-screen bg-black">{image}</div>
+    video = <div className="fixed w-screen h-screen bg-black">{video}</div>
 
 
     className = "fixed w-screen h-[50vh] top-[50vh] bg-gradient-to-b to-blue-600 from-transparent"
@@ -38,6 +38,6 @@ export default function Background( { blur }: { blur?: boolean } ) {
     const gradient = <div className={className}/>
 
     
-    return <div className="fixed -z-10">{image}{gradient}</div>
+    return <div className="fixed -z-10">{video}{gradient}</div>
 
 }
