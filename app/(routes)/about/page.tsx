@@ -18,15 +18,9 @@ function Title() {
 
     let className = titleFont.className + " mb-[3vh] text-[min(6vw,10vh)] text-center "
 
-    className += "portrait:text-[6vh]";           const Element = <h1 className={className}>{title}</h1>
+    className += "portrait:text-[6vh]";           const h1 = <h1 className={className}>{title}</h1>
 
-    return <TitleMotion>{Element}</TitleMotion>
-
-}
-
-function Gap( { children }: PropsWithChildren ) { 
-    
-    return <div className="w-full h-[7vh] content-center">{children}</div>
+    return <TitleMotion>{h1}</TitleMotion>
 
 }
 
@@ -42,15 +36,21 @@ async function Art() {
 
 }
 
+function Gap( { children }: PropsWithChildren ) { 
+    
+    return <div className="w-full h-[7vh] content-center">{children}</div>
+
+}
+
 async function Components() {
 
-    let Element = <div className="w-full h-[26vh] portrait:h-[15vh]"></div>
+    const Filler = <div className="w-full h-[26vh] portrait:h-[15vh]"></div>
 
-    Element = <div className="flex-grow m-[4vh]"><Title/><Body/>{Element}</div>
+    let Element = <div className="flex-grow m-[4vh]"><Title/><Body/>{Filler}</div>
 
     Element = <div className="flex portrait:flex-col bg-black/75">{Element}<Art/></div>
 
-    Element = <Gap><Credits/></Gap>;           return <><ConnectButton/><Gap/>{Element}{Gap}</>
+    return <><ConnectButton/><Gap/>{Element}<Gap><Credits/></Gap></>
 
 }
 
