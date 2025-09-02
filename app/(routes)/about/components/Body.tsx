@@ -78,7 +78,7 @@ function Text( { child }: Props ) {
 
                     enable: true,       direction: "top",       speed: 21,       random: true,
 
-                    gravity: { enable: true,    acceleration: 9.81 },           outModes: { default: "destroy" }
+                    gravity: { enable: true,    acceleration: 9.81 },           outModes: { default: "none",        bottom: "destroy" }
 
                 },
 
