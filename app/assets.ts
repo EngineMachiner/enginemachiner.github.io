@@ -1,14 +1,16 @@
 
 import { join } from "path";            import dirTree from "directory-tree"
+import { Directory } from "./util";
 
-function tree( path: string ) { path = join( "public/", path );       return dirTree(path) }
+export type Assets = Record< string, Directory >
 
-const assetsTree = {
+function directory( path: string ): Directory { path = join( "public/", path );       return dirTree(path) }
+
+const assets: Assets = {
     
-    loadingIcons: tree("loading"),           art: tree("art"),          emojis: tree("emojis"),
-    
-    connect: tree("connect")
+    loadingIcons: directory("loading"),           art: directory("art"),          emojis: directory("emojis"),
+    connect: directory("connect")
 
 }
 
-export default assetsTree
+export default assets

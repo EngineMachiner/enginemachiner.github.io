@@ -1,10 +1,12 @@
 
 "use client"
 
-import { LOCALES } from "@/i18n";
+import { Dispatch, SetStateAction } from "react";
 import { useLocale } from "next-intl";
 
-type Props = { setLocale: ( locale: string ) => void }
+import { LOCALES } from "@/i18n";
+
+type SetLocale = Dispatch< SetStateAction<string> >;            type Props = { setLocale: SetLocale }
 
 export default function LanguageSwitcher( { setLocale }: Props ) {
 

@@ -1,13 +1,16 @@
 
-import { Metadata } from "next";        import "./global.css";
+import "./global.css";
 
-import assetsTree from "./assets";
-import { ChildrenProps } from "./util";
+import { Metadata } from "next"
+import { PropsWithChildren } from "react";
+
+import assets from "./assets";
 
 import Loading from "./components/Loading";
-import TreeProvider from "./components/TreeProvider";
+import Background from "./components/Background";
+import { AssetsProvider } from "./components/Assets";
 import LanguageSetup from "./components/language/Setup";
-import ParticlesInitializer from "./components/Particles";
+import { ParticlesInitializer } from "./components/Particles";
 
 export const metadata: Metadata = {
 
@@ -16,14 +19,14 @@ export const metadata: Metadata = {
 
 }
 
-export default function Layout( { children }: ChildrenProps ) {
+export default function Layout( { children }: PropsWithChildren ) {
 
-    children = <Loading><ParticlesInitializer/>{children}</Loading>
+    children = <><Background/><Loading/><ParticlesInitializer/>{children}</>
 
-    const language = <LanguageSetup>{children}</LanguageSetup>
+    const Language = <LanguageSetup>{children}</LanguageSetup>
 
-    const provider = <TreeProvider value={assetsTree}>{language}</TreeProvider>
+    const Provider = <AssetsProvider value={assets}>{Language}</AssetsProvider>
 
-    const body = <body>{provider}</body>;          return <html>{body}</html>
+    const Body = <body>{Provider}</body>;          return <html>{Body}</html>
 
 }

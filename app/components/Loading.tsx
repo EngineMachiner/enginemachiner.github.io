@@ -3,65 +3,62 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useCallback, useContext, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, JSX } from "react";
 
-import { TreeContext } from "./TreeProvider";
-import { ChildrenProps, randomInTree, sanitizePath } from "@/app/util";
+import { useAssets } from "./Assets";
+import { Directory, randomPath, sanitizePath } from "@/app/util";
 
-function preload( tree: any ) {
+function preload( directory: Directory ): JSX.Element[] {
 
-    return tree.children.map( ( child: any, i: number ) => {
+    return directory.children!.flatMap( child => {
     
         let path = child.path;            path = sanitizePath(path)
 
-        return child.children ? preload(child) : <Image src={path} alt="Preloaded Image" key={i} fill priority/>
+        return child.children ? preload(child) : <Image src={path} key={path} alt="Preloaded Image" fill priority/>
 
     } )
 
 }
 
+// Preloaded images.
+
 function Images() {
 
-    const assetsTree = useContext( TreeContext )!
+    const assets = useAssets()
     
-    let emojis = assetsTree.emojis;           let connect = assetsTree.connect
-
-    emojis = preload(emojis);           connect = preload(connect)
+    const Emojis = preload( assets.emojis );           const Connect = preload( assets.connect )
     
-    const home = <Image src={"home.png"} alt="home" fill priority/>
+    const Home = <Image src={"home.png"} alt="home" fill priority/>
 
-    return <div className="fixed hidden">{home}{emojis}{connect}</div>
+    return <div className="fixed hidden">{Home}{Emojis}{Connect}</div>
 
 }
 
-export default function Loading( { children }: ChildrenProps ) {
+export default function Loading() {
 
     const state = useState('0');        const [ y, setY ] = state
 
-    const open = useCallback( () => setY("-100%"), [] );        useEffect( () => { setTimeout( open, 2000 ) } )
+    const open = useCallback( () => setY("-100%"), [] );        useEffect( () => { setTimeout( open, 2000 ) }, [] )
     
 
-    const assetsTree = useContext( TreeContext )!
+    const assets = useAssets()
 
-    const tree = assetsTree.loadingIcons;           const [src] = useState( () => randomInTree(tree) )
+    const icons = assets.loadingIcons;           const [src] = useState( () => randomPath(icons) )
 
-    const video = <video src={src} preload="metadata" autoPlay loop muted/>
+    const Video = <video src={src} preload="metadata" autoPlay loop muted/>
 
-    let className = "fixed size-[50vmin]";          let div = <div className={className}>{video}</div>
+    let className = "fixed size-[50vmin]";          let Element = <div className={className}>{Video}</div>
 
 
     const color = "bg-gradient-to-b from-indigo-500 to-red-500"
 
-    className = "h-[100dvh] grid place-items-center " + color;        div = <div className={className}>{div}</div>
+    className = "h-[100dvh] grid place-items-center " + color;        Element = <div className={className}>{Element}</div>
 
 
-    className = "fixed w-screen z-20";          const images = Images()
-
+    className = "fixed w-screen z-20"
+    
     const transition = { delay: 1, duration: 3 };        const animate = { y: y }
 
-    div = <motion.div className={className} animate={animate} transition={transition}>{images}{div}</motion.div>
-
-    
-    return <>{div}{children}</>
+    return <motion.div className={className} animate={animate} transition={transition}><Images/>{Element}</motion.div>
 
 }

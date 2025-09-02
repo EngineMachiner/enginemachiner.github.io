@@ -1,11 +1,10 @@
 
 "use client"
 
+import { PropsWithChildren } from "react";
 import { motion, Transition } from "framer-motion";
 
-import { ChildrenProps } from "@/app/util";
-
-export default function TitleMotion( { children }: ChildrenProps ) {
+export default function TitleMotion( { children }: PropsWithChildren ) {
 
     const initial = { opacity: 0,       y: -50 }
 

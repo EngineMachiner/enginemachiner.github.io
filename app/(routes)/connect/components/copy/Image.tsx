@@ -2,19 +2,15 @@
 "use client"
 
 import Image from "next/image"
-import { useContext } from "react";
-
-import { copyContexts } from "./Context";
+import { useCopyCount } from "./Context";
 
 type Props = { src: string,     copy: string }
 
-export default function CopyImage( props: Props ) {
+export default function CopyImage( { src, copy }: Props ) {
 
-    const { src, copy } = props;            const [ StateContext, DispatchContext ] = copyContexts
-    
-    const animate = useContext( StateContext );         const setAnimate = useContext( DispatchContext )
+    const [ count, setCount ] = useCopyCount()
 
-    async function onPointerDown() { await navigator.clipboard.writeText(copy);          setAnimate( animate + 1 ) }
+    async function onPointerDown() { await navigator.clipboard.writeText(copy);          setCount( count + 1 ) }
 
     return <div className="contact" onPointerDown={onPointerDown}><Image src={src} alt={src} fill priority/></div>
 

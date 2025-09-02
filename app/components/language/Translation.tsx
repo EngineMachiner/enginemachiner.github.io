@@ -1,9 +1,9 @@
 
 "use client"
 
-import { useTranslations } from "next-intl"
+import { RichTranslationValues, useTranslations } from "next-intl"
 
-type Props = { translationKey: string;      values?: any }
+type Props = { translationKey: string;      values?: RichTranslationValues }
 
 export default function Translation( { translationKey, values }: Props ) {
 

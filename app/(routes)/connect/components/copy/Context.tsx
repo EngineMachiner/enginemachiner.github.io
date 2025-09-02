@@ -1,24 +1,33 @@
 
 "use client"
 
-import { ChildrenProps } from "@/app/util";
-import { createContext, useState } from "react"
+import { createContext, useContext, useState, Dispatch, SetStateAction, PropsWithChildren } from "react"
 
-type State = number | null
+type CountDispatch = Dispatch< SetStateAction<number> > | null
 
-const StateContext = createContext<State>(null)
-const DispatchContext = createContext<any>(null)
+const CountStateContext = createContext(0)
+const CountDispatchContext = createContext<CountDispatch>(null)
 
-export const copyContexts = [ StateContext, DispatchContext ]
+export function useCopyCount() {
 
-export default function CopyProvider( { children }: ChildrenProps ) {
+    const count = useContext( CountStateContext )
+    const setCount = useContext( CountDispatchContext )
 
-    const [ animate, setAnimate ] = useState<State>(null)
+    if ( !setCount ) throw new Error("useCopyCount must be used within an CopyProvider.")
 
-    const StateProvider = StateContext.Provider;            const DispatchProvider = DispatchContext.Provider
+    return [ count, setCount ] as const
 
-    const Provider = <DispatchProvider value={setAnimate}>{children}</DispatchProvider>
+}
 
-    return <StateProvider value={animate}>{Provider}</StateProvider>
+const StateProvider = CountStateContext.Provider
+const DispatchProvider = CountDispatchContext.Provider
+
+export function CopyProvider( { children }: PropsWithChildren ) {
+
+    const [ count, setCount ] = useState(0) // Animation count state.
+
+    const Provider = <DispatchProvider value={setCount}>{children}</DispatchProvider>
+
+    return <StateProvider value={count}>{Provider}</StateProvider>
 
 }

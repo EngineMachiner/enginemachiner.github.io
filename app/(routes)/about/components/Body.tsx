@@ -2,35 +2,36 @@
 "use client"
 
 import { join } from "path";
+import { PointerEvent } from "react";
 import { useTranslations } from "next-intl";
-import { useContext, PointerEvent } from "react";
 import { motion, Transition } from "framer-motion";
+import { IParticlesOptions, RecursivePartial } from "@tsparticles/engine";
 
 import { useWindowSize } from "@/app/client";
-import { bodyFont, randomInTree } from "@/app/util";
+import { bodyFont, Directory, randomPath } from "@/app/util";
 
-import { TreeContext } from "@/app/components/TreeProvider";
+import { useAssets } from "@/app/components/Assets";
 import { particlesContainer } from "@/app/components/Particles";
 
-const keywords: { [ key: string ]: any } = {
+const keywords: Record< string, string > = {
     
     Hello: "wave.png",          Spanish: "spanish.png",          English: "english.png"
 
 }
 
-function path( keyword: string, tree: any ) {
+function path( keyword: string, directory: Directory ) {
 
     let path = keywords[keyword];           if (path) return join( "emojis/", path )
 
-    const subTree = tree.children.find( ( x: any ) => x.name === keyword )
+    const child = directory.children!.find( child => child.name === keyword )
 
-    return randomInTree( subTree )
+    return child ? randomPath(child) : undefined
 
 }
 
 function pointerPosition( event: PointerEvent ) {
 
-    const scale = window.devicePixelRatio
+    const scale = devicePixelRatio
 
     return { x: event.pageX * scale,     y: event.pageY * scale }
 
@@ -38,35 +39,36 @@ function pointerPosition( event: PointerEvent ) {
 
 function particles() { return particlesContainer!.particles! }
 
+type Options = RecursivePartial<IParticlesOptions>
+
 type Props = { child: Child };          type Child = { text: string;       keyword?: string }
 
 function Text( { child }: Props ) {
 
-    const { text, keyword } = child;            const assetsTree = useContext( TreeContext )
+    const { text, keyword } = child;            const emojis = useAssets().emojis
 
 
     let className = bodyFont.className + " text-[3vh] portrait:text-[5vw] whitespace-pre-wrap mb-[0.375vh]"
 
-    const space = <span className={className}> </span>;         useWindowSize()
+    const Space = <span className={className}> </span>;         useWindowSize()
 
-    if ( !keyword ) return <span className={className}>{text}{space}</span>
+    if ( !keyword ) return <span className={className}>{text}{Space}</span>
 
-
-    const tree = assetsTree.emojis
 
     function spawn( event: PointerEvent ) {
 
         let n = particles().count;            if ( n > 21 ) return
 
-        n = 7;        const pos = pointerPosition(event)
+        
+        n = 7
 
         for ( let i = 0; i <= n; i++ ) {
 
-            const time = 500 * i / n;           const src = path( keyword!, tree )
+            const time = 500 * i / n;           const src = path( keyword!, emojis )
 
             const size = Math.min( innerWidth, innerHeight / 40 )
 
-            const options: any = {
+            const options: Options = {
 
                 size: { value: size },
 
@@ -82,6 +84,9 @@ function Text( { child }: Props ) {
 
             }
 
+
+            const pos = pointerPosition(event)
+
             setTimeout( () => { particles().addParticle( pos, options ) }, time )
 
         }
@@ -91,7 +96,7 @@ function Text( { child }: Props ) {
 
     className += " specialText cursor-pointer"
 
-    return <span className={className} onPointerDown={spawn}>{text}{space}</span>
+    return <span className={className} onPointerDown={spawn}>{text}{Space}</span>
 
 }
 
@@ -107,7 +112,7 @@ export default function Body() {
 
     } )
 
-    const div = <div className="max-w-[150vh]">{texts}</div>
+    const Element = <div className="max-w-[150vh]">{texts}</div>
 
 
     const initial = { opacity: 0,       x: -50 }
@@ -116,6 +121,6 @@ export default function Body() {
 
     const animate = { opacity: 1,       x: 0,       transition: transition }
 
-    return <motion.div initial={initial} animate={animate}>{div}</motion.div>
+    return <motion.div initial={initial} animate={animate}>{Element}</motion.div>
 
 }

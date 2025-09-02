@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 
 function size() { return { x: innerWidth,       y: innerHeight } }
 
-export function useWindowSize() {
+export function useWindowSize(): { x: number; y: number } {
 
-    const [ _, setSize ] = useState( size() )
+    const [ currentSize, setSize ] = useState( size() )
 
     useEffect( () => {
     
@@ -15,6 +15,8 @@ export function useWindowSize() {
 
         return () => window.removeEventListener( "resize", resize )
 
-    } )
+    }, [] )
 
+    return currentSize
+    
 }

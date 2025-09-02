@@ -5,7 +5,9 @@ import { motion, TargetAndTransition, Transition } from "framer-motion";
 
 import Contact from "./Contact";
 
-const contacts: any = {
+type Contact = { copy?: string,         href?: string }
+
+const contacts: Record< string, Contact > = {
 
     "discord.png": { copy: "engine_machiner" },
     "mail.png": { copy: "mfpc98@gmail.com" },
@@ -18,20 +20,16 @@ const contacts: any = {
 
 export default function Contacts() {
 
-    const components = []
+    const components = Object.entries(contacts).map( ( [ src, { copy, href } ] ) => {
 
-    for ( const src in contacts ) {
-        
-        const { copy, href } = contacts[src]
+        return <Contact key={src} src={src} copy={copy} href={href}/>
 
-        components.push( <Contact key={src} src={src} copy={copy} href={href}/> )
-    
-    }
+    } )
 
 
     let className = "fixed grid grid-cols-3 portrait:grid-cols-2 gap-[8vmin] bg-green-400 p-[8vmin] rounded-[4vh]"
 
-    const div = <div className={className}>{components}</div>
+    const Element = <div className={className}>{components}</div>
 
 
     let initial: TargetAndTransition = { y: innerHeight }
@@ -52,6 +50,6 @@ export default function Contacts() {
 
     className = "flex justify-center items-center h-[100dvh]"
 
-    return <motion.div className={className} initial={initial} animate={animate}>{div}</motion.div>
+    return <motion.div className={className} initial={initial} animate={animate}>{Element}</motion.div>
     
 }

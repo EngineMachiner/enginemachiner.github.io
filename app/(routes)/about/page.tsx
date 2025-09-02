@@ -1,16 +1,16 @@
 
-import React from "react";
 import { readFile } from "fs/promises";
+import React, { PropsWithChildren } from "react";
 
-import assetsTree from "@/app/assets";
-import { titleFont, ChildrenProps, randomInTree } from "@/app/util";
+import assets from "@/app/assets";
+import { titleFont, randomPath } from "@/app/util";
 
-import Body from "./Body";
-import TitleMotion from "./TitleMotion";
+import Body from "./components/Body";
+import Credits from "@/app/components/Credits";
+import TitleMotion from "./components/TitleMotion";
 import { ParticlesLoader } from "@/app/components/Particles";
-import ConnectButton from "@/app/(routes)/about/ConnectButton";
 import Translation from "@/app/components/language/Translation";
-import Background, { Credits } from "@/app/components/Background";
+import ConnectButton from "@/app/(routes)/about/components/ConnectButton";
 
 function Title() {
 
@@ -18,19 +18,19 @@ function Title() {
 
     let className = titleFont.className + " mb-[3vh] text-[min(6vw,10vh)] text-center "
 
-    className += "portrait:text-[6vh]";           const h1 = <h1 className={className}>{title}</h1>
+    className += "portrait:text-[6vh]";           const Element = <h1 className={className}>{title}</h1>
 
-    return <TitleMotion>{h1}</TitleMotion>
+    return <TitleMotion>{Element}</TitleMotion>
 
 }
 
-function Gap( { children }: ChildrenProps ) { 
+function Gap( { children }: PropsWithChildren ) { 
     
     return <div className="w-full h-[7vh] content-center">{children}</div>
 
 }
 
-const tree = assetsTree.art;          const file = randomInTree( tree, false )
+const file = randomPath( assets.art, false )
 
 async function Art() {
 
@@ -38,25 +38,24 @@ async function Art() {
 
     const className = "p-[4vmin] text-green-500 text-[1vmin] portrait:text-[1.5vmin] text-right"
 
-    const pre = <pre className={className}>{art}</pre>;         return <div className="relative bg-black/75">{pre}</div>
+    const Pre = <pre className={className}>{art}</pre>;         return <div className="relative bg-black/75">{Pre}</div>
 
 }
 
-
 async function Components() {
 
-    let gap = <div className="w-full h-[26vh] portrait:h-[15vh]"></div>
+    let Element = <div className="w-full h-[26vh] portrait:h-[15vh]"></div>
 
-    let div = <div className="flex-grow m-[4vh]"><Title/><Body/>{gap}</div>
+    Element = <div className="flex-grow m-[4vh]"><Title/><Body/>{Element}</div>
 
-    div = <div className="flex portrait:flex-col bg-black/75">{div}<Art/></div>
+    Element = <div className="flex portrait:flex-col bg-black/75">{Element}<Art/></div>
 
-    gap = <Gap><Credits/></Gap>;           return <><ConnectButton/><Gap/>{div}{gap}</>
+    Element = <Gap><Credits/></Gap>;           return <><ConnectButton/><Gap/>{Element}{Gap}</>
 
 }
 
 export default async function About() {
-
-    return <div className="relative"><ParticlesLoader/><Background/><Components/></div>
+    
+    return <div className="relative"><ParticlesLoader/><Components/></div>
 
 }

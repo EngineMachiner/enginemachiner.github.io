@@ -1,5 +1,4 @@
 
-import React from "react"
 import font from "next/font/local"
 
 export const titleFont = font( { src: "../fonts/LoftygoalsRegular.otf", preload: false } )
@@ -22,12 +21,12 @@ function randomUntil( x: number ) { x = Math.random() * x;       return Math.flo
 
 function randomIndex( a: any[] ) { const i = a.length;      return randomUntil(i) }
 
-function randomValue( a: any[] ) { const i = randomIndex(a);        return a[i] }
+function randomValue<T>( a: T[] ) { const i = randomIndex(a);        return a[i] }
 
 
-export type ChildrenProps = { children?: React.ReactNode }
+export type Messages = any
 
-export async function messages( locale: string ) {
+export async function messages( locale: string ): Promise<Messages> {
 
     const messages = await import(`../messages/${locale}.json`);          return messages.default
 
@@ -36,14 +35,14 @@ export async function messages( locale: string ) {
 export function sanitizePath( path: string ) { return path.replace( "public/", "" ) }
 
 
-type Tree = Record<string, any>
+export type Directory = { path: string;        name: string;       children?: Directory[] }
 
-export function randomInTree( tree: Tree, sanitize: boolean = true ): any {
+export function randomPath( directory: Directory, sanitize: boolean = true ): string {
 
-    let children = tree.children!;            const child = randomValue(children)
+    const children = directory.children!;            const child = randomValue(children)
     
-    children = child.children;          let path = child.path;          if (sanitize) path = sanitizePath(path)
+    let path = child.path;          if (sanitize) path = sanitizePath(path)
 
-    return children ? randomInTree(children) : path
+    return child.children ? randomPath(child) : path
 
 }

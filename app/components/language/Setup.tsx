@@ -1,12 +1,12 @@
 
 "use client"
 
-import { NextIntlClientProvider as IntlProvider } from "next-intl";
 import { getCookie, setCookie } from "cookies-next/client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, PropsWithChildren } from "react";
+import { NextIntlClientProvider as IntlProvider } from "next-intl";
 
+import { messages as importMessages, Messages } from "@/app/util";
 import { COOKIE_LOCALE_KEY, DEFAULT_LOCALE, LOCALES } from "@/i18n";
-import { ChildrenProps, messages as importMessages } from "@/app/util";
 
 import LanguageSwitcher from "./Switcher";
 
@@ -18,11 +18,13 @@ function browserLanguage() {
 
 }
 
-export default function LanguageSetup( { children }: ChildrenProps ) {
+const YEAR_IN_SECONDS = 60 * 60 * 24 * 365
+
+export default function LanguageSetup( { children }: PropsWithChildren ) {
 
     const [ locale, setLocale ] = useState( DEFAULT_LOCALE )
     
-    const [ messages, setMessages ] = useState(null)
+    const [ messages, setMessages ] = useState<Messages>(null)
 
 
     function setInitialLocale() {
@@ -31,11 +33,14 @@ export default function LanguageSetup( { children }: ChildrenProps ) {
 
     }
 
+    useEffect( () => setInitialLocale(), [] )
+
+
     function setLocaleCookie() {
 
         const includes = LOCALES.includes(locale);          if ( !includes ) return
 
-        setCookie( COOKIE_LOCALE_KEY, locale, { maxAge: 60 * 60 * 24 * 365 } )
+        setCookie( COOKIE_LOCALE_KEY, locale, { maxAge: YEAR_IN_SECONDS } )
 
     }
 
@@ -45,16 +50,16 @@ export default function LanguageSetup( { children }: ChildrenProps ) {
 
     }
 
-    function setMetadata() { document.title = messages!["metatitle"] }
-
-
-    useEffect( () => setInitialLocale(), [] )
-
     useEffect( () => { setLocaleCookie();       setImportedMessages() }, [locale] )
 
 
-    if ( !messages ) return;            setMetadata()
-    
+    function setMetadata() { document.title = messages!["metatitle"] }
+
+    useEffect( () => { if (messages) setMetadata() }, [messages] )
+
+
+    if ( !messages ) return null
+
     children = <><LanguageSwitcher setLocale={setLocale}/>{children}</>
 
     return <IntlProvider locale={locale} messages={messages}>{children}</IntlProvider>
