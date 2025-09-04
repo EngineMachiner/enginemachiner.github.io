@@ -15,7 +15,7 @@ export function useCopyCount() {
 
     if ( !setCount ) throw new Error("useCopyCount must be used within an CopyProvider.")
 
-    return [ count, setCount ] as const
+    return [ count!, setCount ] as const
 
 }
 
