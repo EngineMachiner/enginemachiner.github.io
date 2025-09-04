@@ -9,11 +9,11 @@ const Context = createContext< Assets | null >(null);             const Provider
 
 export function useAssets() {
 
-    const context = useContext(Context)
+    const assets = useContext(Context)
 
-    if ( !context ) throw new Error("useAssets must be used within an AssetsProvider.")
+    if ( !assets ) throw new Error("useAssets must be used within an AssetsProvider.")
 
-    return context
+    return assets
 
 }
 

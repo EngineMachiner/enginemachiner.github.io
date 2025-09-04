@@ -6,8 +6,6 @@ import { loadSlim } from "@tsparticles/slim"
 import { Container } from "@tsparticles/engine"
 import { initParticlesEngine } from "@tsparticles/react"
 
-// Is there no way to this in a react way without it being a mess and the container setting not being rerendered forever.
-
 export let particlesContainer: Container | undefined
 
 export const particlesLoaded = async ( container?: Container ) => { particlesContainer = container }

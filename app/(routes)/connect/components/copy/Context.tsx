@@ -5,7 +5,7 @@ import { createContext, useContext, useState, Dispatch, SetStateAction, PropsWit
 
 type CountDispatch = Dispatch< SetStateAction<number> > | null
 
-const CountStateContext = createContext(0)
+const CountStateContext = createContext< number | null >(null)
 const CountDispatchContext = createContext<CountDispatch>(null)
 
 export function useCopyCount() {
