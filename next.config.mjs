@@ -9,7 +9,7 @@ const withNextIntl = createNextIntlPlugin("./i18n.ts");
 
 const nextConfig = {
 
-    allowedDevOrigins: ["Put IP here."],
+    //allowedDevOrigins: ["Put IP here."],
 
     /**
      * Enable static exports for the App Router.
