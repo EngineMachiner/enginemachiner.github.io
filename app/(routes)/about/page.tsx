@@ -1,6 +1,6 @@
 
 import { readFile } from "fs/promises";
-import React, { PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 
 import assets from "@/app/assets";
 import { titleFont, randomPath } from "@/app/util";
