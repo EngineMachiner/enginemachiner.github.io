@@ -9,12 +9,12 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "@tailwindcss/postcss": "^4.1.18",
+        "@tailwindcss/postcss": "^4.2.1",
         "@tsparticles/engine": "^3.9.1",
         "@tsparticles/react": "^3.0.0",
         "cookies-next": "^6.1.1",
         "directory-tree": "^3.6.0",
-        "framer-motion": "^12.34.1",
+        "framer-motion": "^12.35.1",
         "next": "^16.1.6",
         "next-intl": "^4.8.3",
         "react": "^19",
@@ -29,13 +29,13 @@
         "braces": "^3.0.3",
         "cross-spawn": "^7.0.6",
         "micromatch": "^4.0.8",
-        "autoprefixer": "^10.4.24",
-        "eslint": "^9.7.0",
+        "autoprefixer": "^10.4.27",
+        "eslint": "^9.10.0",
         "eslint-config-next": "^16.1.6",
         "eslint-plugin-react": "^7.37.5",
         "eslint-plugin-react-hooks": "^7.0.1",
-        "postcss": "^8.5.6",
-        "tailwindcss": "^4.1.18",
+        "postcss": "^8.5.8",
+        "tailwindcss": "^4.2.1",
         "typescript": "^5"
     }
 }
