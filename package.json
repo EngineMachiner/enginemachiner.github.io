@@ -9,13 +9,13 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "@tailwindcss/postcss": "^4.2.1",
+        "@tailwindcss/postcss": "^4.2.2",
         "@tsparticles/engine": "^3.9.1",
         "@tsparticles/react": "^3.0.0",
         "cookies-next": "^6.1.1",
         "directory-tree": "^3.6.0",
-        "framer-motion": "^12.35.1",
-        "next": "^16.1.6",
+        "framer-motion": "^12.38.0",
+        "next": "^16.2.1",
         "next-intl": "^4.8.3",
         "react": "^19",
         "react-dom": "^19",
@@ -25,17 +25,17 @@
         "@types/node": "^25",
         "@types/react": "^19",
         "@types/react-dom": "^19",
-        "@next/eslint-plugin-next": "^16.1.6",
+        "@next/eslint-plugin-next": "^16.2.1",
         "braces": "^3.0.3",
         "cross-spawn": "^7.0.6",
         "micromatch": "^4.0.8",
         "autoprefixer": "^10.4.27",
-        "eslint": "^9.10.0",
-        "eslint-config-next": "^16.1.6",
+        "eslint": "^9.20.0",
+        "eslint-config-next": "^16.2.1",
         "eslint-plugin-react": "^7.37.5",
         "eslint-plugin-react-hooks": "^7.0.1",
         "postcss": "^8.5.8",
-        "tailwindcss": "^4.2.1",
+        "tailwindcss": "^4.2.2",
         "typescript": "^5"
     }
 }
