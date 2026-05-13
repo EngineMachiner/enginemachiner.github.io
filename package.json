@@ -9,14 +9,14 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "@tailwindcss/postcss": "^4.2.2",
+        "@tailwindcss/postcss": "^4.3.0",
         "@tsparticles/engine": "^3.9.1",
         "@tsparticles/react": "^3.0.0",
         "cookies-next": "^6.1.1",
         "directory-tree": "^3.6.0",
         "framer-motion": "^12.38.0",
-        "next": "^16.2.3",
-        "next-intl": "^4.9.1",
+        "next": "^16.2.6",
+        "next-intl": "^4.11.2",
         "react": "^19",
         "react-dom": "^19",
         "tsparticles": "^3.9.1"
@@ -25,17 +25,17 @@
         "@types/node": "^25",
         "@types/react": "^19",
         "@types/react-dom": "^19",
-        "@next/eslint-plugin-next": "^16.2.3",
+        "@next/eslint-plugin-next": "^16.2.6",
         "braces": "^3.0.3",
         "cross-spawn": "^7.0.6",
         "micromatch": "^4.0.8",
         "autoprefixer": "^10.5.0",
-        "eslint": "^9.21.0",
-        "eslint-config-next": "^16.2.3",
+        "eslint": "^9.7.0",
+        "eslint-config-next": "^16.2.6",
         "eslint-plugin-react": "^7.37.5",
-        "eslint-plugin-react-hooks": "^7.0.1",
-        "postcss": "^8.5.9",
-        "tailwindcss": "^4.2.2",
+        "eslint-plugin-react-hooks": "^7.1.1",
+        "postcss": "^8.5.14",
+        "tailwindcss": "^4.3.0",
         "typescript": "^6"
     }
 }
