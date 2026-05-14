@@ -1,6 +1,6 @@
 {
     "name": "nextjs-my-website",
-    "version": "0.1.5",
+    "version": "1.0.0",
     "private": true,
     "scripts": {
         "dev": "next dev --turbopack",
@@ -34,8 +34,9 @@
         "eslint-config-next": "^16.2.6",
         "eslint-plugin-react": "^7.37.5",
         "eslint-plugin-react-hooks": "^7.1.1",
-        "postcss": ">=8.5.14",
+        "postcss": "^8.5.14",
         "tailwindcss": "^4.3.0",
         "typescript": "^6"
-    }
+    },
+    "overrides": { "postcss": "$postcss" }
 }
