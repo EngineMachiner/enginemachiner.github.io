@@ -41,7 +41,7 @@ jobs:
         run: npm ci
 
       - name: Build and Export Next.js
-        run: npm run build && npm run export
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
