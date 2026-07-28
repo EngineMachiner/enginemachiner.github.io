@@ -30,4 +30,4 @@ const nextConfig = {
 
 }
 
-modules.export = nextConfig;
+export default withNextIntl( nextConfig )
