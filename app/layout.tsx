@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function Layout( { children }: PropsWithChildren ) {
 
-    children = <><Background/><Loading/><ParticlesInitializer/>{children}</>
+    children = <><Background/><Loading/><ParticlesInitializer>{children}</ParticlesInitializer></>
 
     const Language = <LanguageSetup>{children}</LanguageSetup>
 

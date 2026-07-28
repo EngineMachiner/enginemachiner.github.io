@@ -1,6 +1,6 @@
 {
     "name": "nextjs-my-website",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "private": true,
     "scripts": {
         "dev": "next dev --turbopack",
@@ -9,34 +9,28 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "@tailwindcss/postcss": "^4.3.0",
-        "@tsparticles/engine": "^3.9.1",
-        "@tsparticles/react": "^3.0.0",
+        "@tailwindcss/postcss": "^4.3.3",
+        "@tsparticles/react": "^4.3.2",
         "cookies-next": "^6.1.1",
         "directory-tree": "^3.6.0",
-        "framer-motion": "^12.38.0",
-        "next": "^16.2.6",
-        "next-intl": "^4.11.2",
-        "react": "^19",
-        "react-dom": "^19",
-        "tsparticles": "^3.9.1"
+        "framer-motion": "^12.43.0",
+        "next": "^16.2.12",
+        "next-intl": "^4.13.4",
+        "tailwindcss": "^4.3.3",
+        "tsparticles": "^4.3.2"
     },
     "devDependencies": {
-        "@types/node": "^25",
-        "@types/react": "^19",
-        "@types/react-dom": "^19",
-        "@next/eslint-plugin-next": "^16.2.6",
-        "braces": "^3.0.3",
-        "cross-spawn": "^7.0.6",
-        "micromatch": "^4.0.8",
-        "autoprefixer": "^10.5.0",
-        "eslint": "^9.7.0",
-        "eslint-config-next": "^16.2.6",
-        "eslint-plugin-react": "^7.37.5",
-        "eslint-plugin-react-hooks": "^7.1.1",
-        "postcss": "^8.5.14",
-        "tailwindcss": "^4.3.0",
-        "typescript": "^6"
+        "@types/node": "26.1.2",
+        "@types/react": "19.2.17",
+        "typescript": "7.0.2"
     },
-    "overrides": { "postcss": "$postcss" }
+    "overrides": {
+        "postcss": "8.5.23",
+        "sharp": "0.35.0"
+    },
+    "allowScripts": {
+        "@parcel/watcher@2.6.0": true,
+        "@tsparticles/engine@4.3.2": true,
+        "@swc/core@1.15.46": true
+    }
 }

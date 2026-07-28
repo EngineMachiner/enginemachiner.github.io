@@ -1,10 +1,10 @@
 
 "use client"
 
-import Particles from "@tsparticles/react"
 import { loadSlim } from "@tsparticles/slim"
 import { Container } from "@tsparticles/engine"
-import { initParticlesEngine } from "@tsparticles/react"
+import Particles, { ParticlesProvider } from "@tsparticles/react"
+import { PropsWithChildren } from "react"
 
 export let particlesContainer: Container | undefined
 
@@ -20,10 +20,8 @@ export function ParticlesLoader() {
 
 }
 
-export function ParticlesInitializer() {
+export function ParticlesInitializer( { children }: PropsWithChildren ) {
 
-    initParticlesEngine( async engine => await loadSlim(engine) )
-
-    return null
+    return <ParticlesProvider init={ async engine => await loadSlim(engine) }>{children}</ParticlesProvider>
 
 }
