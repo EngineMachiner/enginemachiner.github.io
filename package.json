@@ -13,16 +13,17 @@
         "@tsparticles/react": "^4.3.2",
         "cookies-next": "^6.1.1",
         "directory-tree": "^3.6.0",
-        "framer-motion": "^12.43.0",
-        "next": "^16.2.12",
-        "next-intl": "^4.13.4",
+        "framer-motion": "^13.1.0",
+        "next": "^16.3.1",
+        "next-intl": "^4.13.7",
         "tailwindcss": "^4.3.3",
         "tsparticles": "^4.3.2"
     },
     "devDependencies": {
-        "@types/node": "26.1.2",
-        "@types/react": "19.2.17",
-        "typescript": "^6.0.3"
+        "@types/node": "26.2.0",
+        "@types/react": "19.2.18",
+        "typescript": "^7.0.2",
+        "nanoid": ">=3.3.18"
     },
     "overrides": {
         "postcss": "8.5.23",
@@ -31,6 +32,6 @@
     "allowScripts": {
         "@parcel/watcher@2.6.0": true,
         "@tsparticles/engine@4.3.2": true,
-        "@swc/core@1.15.46": true
+        "@swc/core@1.15.47": true
     }
 }

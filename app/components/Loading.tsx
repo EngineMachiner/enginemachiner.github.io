@@ -47,12 +47,9 @@ export default function Loading() {
 
     const Video = <video src={src} preload="metadata" autoPlay loop muted/>
 
-    let className = "fixed size-[50vmin]";          let Element = <div className={className}>{Video}</div>
-
-
     const color = "bg-gradient-to-b from-indigo-500 to-red-500"
 
-    className = "h-[100dvh] grid place-items-center " + color;        Element = <div className={className}>{Element}</div>
+    let className = "h-[100dvh] grid place-items-center " + color;        let Element = <div className={className}>{Video}</div>
 
 
     className = "fixed w-screen z-20"
