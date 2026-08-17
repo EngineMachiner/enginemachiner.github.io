@@ -31,7 +31,9 @@ function path( keyword: string, directory: Directory ) {
 
 function pointerPosition( event: PointerEvent ) {
 
-    return { x: event.clientX,     y: event.clientY }
+    const ratio = particlesContainer?.retina?.pixelRatio ?? 1
+
+    return { x: event.clientX * ratio,     y: event.clientY * ratio }
 
 }
 
