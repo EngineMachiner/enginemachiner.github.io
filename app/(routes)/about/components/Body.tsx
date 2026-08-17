@@ -31,11 +31,7 @@ function path( keyword: string, directory: Directory ) {
 
 function pointerPosition( event: PointerEvent ) {
 
-    //const scale = devicePixelRatio
-
-    //return { x: event.pageX * scale,     y: event.pageY * scale }
-
-    return { x: event.pageX,     y: event.pageY }
+    return { x: event.clientX,     y: event.clientY }
 
 }
 
