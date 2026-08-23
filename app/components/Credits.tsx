@@ -13,8 +13,8 @@ const URL = "https://www.patreon.com/posts/20170210-gif-8052202"
 
 export default function Credits() {
 
-    const className = font + " text-[2vh] portrait:text-[1.75vh] whitespace-pre-wrap"
-    
+    let className = font + " text-[clamp(0.9rem,1.75vw,1.25rem)] whitespace-pre-wrap"
+
     const artist: RichTagsFunction = chunks => {
     
         return <Link className={ className + " textLink" } href={URL} key="artist-link">{chunks}</Link>
@@ -25,6 +25,6 @@ export default function Credits() {
 
     const Credits = <p className={className}>{Text}</p>
 
-    return <div className="ml-[2vh]">{Credits}</div>
+    return <div className="ml-[clamp(1.5rem,1vw,2rem)]">{Credits}</div>
 
 }

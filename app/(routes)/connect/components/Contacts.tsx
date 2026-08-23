@@ -27,7 +27,9 @@ export default function Contacts() {
     } )
 
 
-    let className = "fixed grid grid-cols-3 portrait:grid-cols-2 gap-[8vmin] bg-green-400 p-[8vmin] rounded-[4vh]"
+    let className = "fixed grid grid-cols-3 gap-[4vw] p-[3vw] rounded-[3vw] bg-green-400"
+
+    className += " portrait:grid-cols-2 portrait:gap-[4vh] portrait:p-[4vh] portrait:rounded-[3vh]"
 
     const Element = <div className={className}>{components}</div>
 
@@ -48,7 +50,7 @@ export default function Contacts() {
     }
 
 
-    className = "flex justify-center items-center h-[100dvh]"
+    className = "flex justify-center items-center h-dvh"
 
     return <motion.div className={className} initial={initial} animate={animate}>{Element}</motion.div>
     

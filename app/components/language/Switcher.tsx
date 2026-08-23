@@ -16,11 +16,11 @@ export default function LanguageSwitcher( { setLocale }: Props ) {
 
         let i = LOCALES.indexOf(locale) + 1;            i = i % LOCALES.length
 
-        locale = LOCALES[i];            setLocale( locale )
+        const nextLocale = LOCALES[i];            setLocale( nextLocale )
 
     }
 
-    const className = "button absolute z-20 top-[1vh] right-[1.5vh] text-green-800"
+    const className = "button absolute cursor-pointer z-20 top-[clamp(0.5rem,1vh,1rem)] right-[clamp(0.75rem,1vw,2rem)] text-green-800"
 
     return <button className={className} onClick={onClick}>{title}</button>
 

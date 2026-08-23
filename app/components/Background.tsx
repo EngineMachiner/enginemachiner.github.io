@@ -10,7 +10,7 @@ export default function Background() {
 
     let className = "object-cover size-full"
 
-    let Video = <video className={className} src="/background.webm" preload="metadata" autoPlay loop muted/>
+    let Video = <video className={className + " motion-reduce:hidden"} src="/background.webm" preload="metadata" autoPlay loop muted playsInline aria-hidden="true"/>
 
     Video = <div className="fixed w-screen h-screen bg-black">{Video}</div>
 

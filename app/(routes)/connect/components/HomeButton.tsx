@@ -4,11 +4,11 @@ import Image from "next/image";
 
 export default function HomeButton() {
 
-    const Home = <Image src="home.png" alt="Home Link" fill priority/>
+    const Home = <Image src="/home.png" alt="Home Link" fill loading="eager"/>
 
-    const Element = <div className="relative h-3/4 w-3/4">{Home}</div>
+    const Element = <div className="relative">{Home}</div>
 
-    const className = "button !size-[10vh] absolute grid place-items-center top-[3vh] left-[3vh]"
+    const className = "button absolute top-[clamp(0.5rem,1vh,1.5rem)] left-[clamp(0.5rem,1vw,2rem)]"
 
     return <Link className={className} href="/">{Element}</Link>
 

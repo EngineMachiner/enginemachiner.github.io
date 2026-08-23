@@ -1,36 +1,71 @@
 
 @import "tailwindcss";
 
-:root { color-scheme: light dark }          body { color: white;        user-select: none }
+:root { color-scheme: light dark; }
 
-.button {
-    
-    width: 5vh;         height: 5vh;        cursor: pointer;        border-radius: 2vh;
+body {
 
-    font-size: 2.5vh;       font-weight: 700;       font-family: infoFont, infoFont Fallback
-
-}
-
-
-.textLink { color: var( --color-cyan-400 ) }
-
-.textLink:hover, .textLink:active { color: var( --color-lime-400 ) }
-
-
-.specialText { color: var( --color-amber-400 ) }
-
-.specialText:hover, .specialText:active { color: var( --color-cyan-400 ) }
-
-.button {
-    
-    background-color: var( --color-green-400 );     transition: background-color 0.3s ease-in-out
+    color: white;
+    user-select: none;
+    min-height: 100dvh;
 
 }
 
-.button:hover, .button:active { background-color: var( --color-sky-400 ) }
+.button {
 
+    width: 3rem; height: 3rem;
 
-.textLink, .specialText { transition: color 0.3s ease-in-out }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-weight: 700;
+    font-size: clamp(1.5rem, 1vw, 1.75rem);
+    font-family: infoFont, infoFont Fallback;
 
+    background-color: var(--color-green-400);
+    transition: background-color 0.3s ease-in-out;
+    
+}
 
-.contact { position: relative;        width: 25vmin;      height: 25vmin;       cursor: pointer }
+.button > * { width: 70%; height: 70%; }
+
+.button:hover,
+.button:active { background-color: var(--color-sky-400) }
+
+.button,
+.copy-toast { border-radius: 1rem; }
+
+.art-panel { padding: 1rem; font-size: 0.4rem; max-width: 100%; overflow-x: auto; }
+
+.textLink { color: var(--color-cyan-400) }
+
+.textLink:hover,
+.textLink:active { color: var(--color-lime-400) }
+
+.specialText { color: var(--color-amber-400) }
+
+.specialText:hover,
+.specialText:active { color: var(--color-cyan-400) }
+
+.textLink,
+.specialText { transition: color 0.3s ease-in-out }
+
+.contact {
+    position: relative;
+    width: clamp(1.5rem, 8vmax, 20rem);
+    height: clamp(1.5rem, 8vmax, 20rem);    cursor: pointer;
+}
+
+.copy-toast {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    padding: clamp(0.5rem, 1vw, 0.75rem);
+}
+
+.button:focus-visible,
+.contact:focus-visible,
+.textLink:focus-visible,
+.specialText:focus-visible {
+    outline: 0.2rem solid var(--color-yellow-300);
+    outline-offset: 0.2rem;
+}

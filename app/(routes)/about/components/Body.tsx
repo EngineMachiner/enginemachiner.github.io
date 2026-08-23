@@ -7,7 +7,6 @@ import { useTranslations } from "next-intl";
 import { motion, Transition } from "framer-motion";
 import { IParticlesOptions, RecursivePartial } from "@tsparticles/engine";
 
-import { useWindowSize } from "@/app/client";
 import { bodyFont, Directory, randomPath } from "@/app/util";
 
 import { useAssets } from "@/app/components/Assets";
@@ -33,11 +32,11 @@ function pointerPosition( event: PointerEvent ) {
 
     const ratio = particlesContainer?.retina?.pixelRatio ?? 1
 
-    return { x: event.clientX * ratio,     y: event.clientY * ratio }
+    return { x: event.pageX * ratio,     y: event.pageY * ratio }
 
 }
 
-function particles() { return particlesContainer!.particles! }
+function particlesManager() { return particlesContainer?.particles }
 
 type Options = RecursivePartial<IParticlesOptions>
 
@@ -48,16 +47,16 @@ function Text( { child }: Props ) {
     const { text, keyword } = child;            const emojis = useAssets().emojis
 
 
-    let className = bodyFont.className + " text-[3vh] portrait:text-[5vw] whitespace-pre-wrap mb-[0.375vh]"
+    let className = bodyFont.className + " text-[clamp(1.25rem,1.25vw,1.75rem)]"
 
-    const Space = <span className={className}> </span>;         useWindowSize()
-
-    if ( !keyword ) return <span className={className}>{text}{Space}</span>
+    if ( !keyword ) return <span className={className}>{text}</span>
 
 
     function spawn( event: PointerEvent ) {
 
-        let n = particles().count;            if ( n > 21 ) return
+        const particles = particlesManager();       if ( !particles ) return
+
+        let n = particles.count;                    if ( n > 21 ) return
 
         
         n = 7
@@ -66,7 +65,7 @@ function Text( { child }: Props ) {
 
             const time = 500 * i / n;           const src = path( keyword!, emojis )
 
-            const size = Math.min( innerWidth, innerHeight / 40 )
+            let size = Math.min( innerWidth, innerHeight );         size = Math.max( 20, size / 50 )
 
             const options: Options = {
 
@@ -93,7 +92,7 @@ function Text( { child }: Props ) {
 
             const pos = pointerPosition(event)
 
-            setTimeout( () => { particles().addParticle( pos, options ) }, time )
+            setTimeout( () => { particles.addParticle( pos, options ) }, time )
 
         }
 
@@ -102,7 +101,7 @@ function Text( { child }: Props ) {
 
     className += " specialText cursor-pointer"
 
-    return <span className={className} onPointerDown={spawn}>{text}{Space}</span>
+    return <span className={className} onPointerDown={spawn}>{text}</span>
 
 }
 
@@ -114,11 +113,11 @@ export default function Body() {
     
         const words = sentence.map( (child, i) => <Text child={child} key={i}/> )
     
-        return <div className="flex flex-wrap" key={i}>{words}</div>
+        return <div className="flex flex-wrap gap-x-[0.35em] leading-[1.6] mb-[2rem]" key={i}>{words}</div>
 
     } )
 
-    const Element = <div className="max-w-[150vh]">{texts}</div>
+    const Element = <div className="landscape:max-w-[95%]">{texts}</div>
 
 
     const initial = { opacity: 0,       x: -50 }

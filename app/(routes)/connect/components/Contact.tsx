@@ -14,7 +14,7 @@ export default function Contact( props: Props ) {
     
     src = join( "connect/", src );          if (copy) return <CopyImage src={src} copy={copy}/>
 
-    if (href) return <Link className="contact" href={href}><Image src={src} alt={src} fill priority/></Link>
+    if (href) return <Link className="contact" href={href}><Image src={src} alt={src} fill loading="eager"/></Link>
 
     return null
 

@@ -1,64 +1,73 @@
 
 "use client"
 
+import defaultMessages from "@/messages/en.json"
+
 import { getCookie, setCookie } from "cookies-next/client";
 import { useEffect, useState, PropsWithChildren } from "react";
 import { NextIntlClientProvider as IntlProvider } from "next-intl";
 
-import { messages as importMessages, Messages } from "@/app/util";
+import { messages as importMessages } from "@/app/util";
 import { COOKIE_LOCALE_KEY, DEFAULT_LOCALE, LOCALES } from "@/i18n";
 
 import LanguageSwitcher from "./Switcher";
 
-function localeCookie() { return getCookie( COOKIE_LOCALE_KEY ) }
+function cookie() { return getCookie( COOKIE_LOCALE_KEY ) }
 
 function browserLanguage() {
 
-    const language = navigator.language;          return language.split('-')[0]
+    const language = navigator.language.split('-')[0]
+
+    return LOCALES.includes(language) ? language : DEFAULT_LOCALE
 
 }
 
 const YEAR_IN_SECONDS = 60 * 60 * 24 * 365
 
+function setLocaleCookie( locale: string ) {
+
+    const includes = LOCALES.includes(locale);          if ( !includes ) return
+
+    setCookie( COOKIE_LOCALE_KEY, locale, { maxAge: YEAR_IN_SECONDS } )
+
+}
+
 export default function LanguageSetup( { children }: PropsWithChildren ) {
 
     const [ locale, setLocale ] = useState( DEFAULT_LOCALE )
-    
-    const [ messages, setMessages ] = useState<Messages>(null)
+    const [ messages, setMessages ] = useState(defaultMessages)
 
 
     function setInitialLocale() {
 
-        const locale = localeCookie() || browserLanguage();           setLocale( locale )
+        let locale = cookie() || browserLanguage()
+
+        locale = LOCALES.includes(locale) ? locale : DEFAULT_LOCALE
+
+        setLocale( locale )
 
     }
 
+    // The extra render is tiny and happens only during initial language detection.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     useEffect( () => setInitialLocale(), [] )
 
 
-    function setLocaleCookie() {
+    useEffect( () => {
 
-        const includes = LOCALES.includes(locale);          if ( !includes ) return
+        setLocaleCookie(locale);        let cancelled = false
 
-        setCookie( COOKIE_LOCALE_KEY, locale, { maxAge: YEAR_IN_SECONDS } )
+        importMessages(locale).then( messages => { if ( !cancelled ) setMessages(messages) } )
 
-    }
+        return () => { cancelled = true }
 
-    async function setImportedMessages() {
-        
-        const messages = await importMessages(locale);          setMessages(messages)
+    }, [locale] )
 
-    }
-
-    useEffect( () => { setLocaleCookie();       setImportedMessages() }, [locale] )
+    useEffect( () => { document.documentElement.lang = locale }, [locale] )
 
 
-    function setMetadata() { document.title = messages!["metatitle"] }
+    useEffect( () => { document.title = messages["metatitle"] }, [messages] )
 
-    useEffect( () => { if (messages) setMetadata() }, [messages] )
-
-
-    if ( !messages ) return null
 
     children = <><LanguageSwitcher setLocale={setLocale}/>{children}</>
 
