@@ -36,6 +36,6 @@ export default function Message() {
     )
 
 
-    className = "flex justify-center w-screen";         return <div className={className}>{Element}</div>
+    className = "flex justify-center w-screen absolute z-1";         return <div className={className}>{Element}</div>
 
 }
