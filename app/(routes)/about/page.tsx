@@ -1,10 +1,10 @@
 
-import { readFile } from "fs/promises";
 import { PropsWithChildren } from "react";
 
 import assets from "@/app/assets";
-import { titleFont, randomPath } from "@/app/util";
+import { titleFont } from "@/app/util";
 
+import Art from "./components/Art";
 import Body from "./components/Body";
 import Credits from "@/app/components/Credits";
 import TitleMotion from "./components/TitleMotion";
@@ -23,16 +23,6 @@ function Title() {
 
 }
 
-const file = randomPath( assets.art, false )
-
-async function Art() {
-
-    const art = await readFile( file, "utf8" )
-
-    const className = "art-panel text-green-500 text-right"
-    const Pre = <pre className={className}>{art}</pre>;         return <div className="relative bg-black/75">{Pre}</div>
-
-}
 
 function Gap( { children }: PropsWithChildren ) { 
     
@@ -40,11 +30,13 @@ function Gap( { children }: PropsWithChildren ) {
 
 }
 
+const arts = assets.art
+
 async function Components() {
 
     let Element = <div className="flex-grow m-[2rem]"><Title/><Body/></div>
 
-    Element = <div className="flex portrait:flex-col bg-black/75 min-h-[86vh]">{Element}<Art/></div>
+    Element = <div className="flex portrait:flex-col bg-black/75 min-h-[86vh]">{Element}<Art paths={arts}/></div>
 
     return <><ConnectButton/><Gap/>{Element}<Gap><Credits/></Gap></>
 
