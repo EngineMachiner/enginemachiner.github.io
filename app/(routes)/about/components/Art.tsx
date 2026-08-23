@@ -1,8 +1,8 @@
 
 "use client"
 
-import { Directory, randomPath } from "@/app/util";
 import { useEffect, useState } from "react";
+import { artFont, Directory, randomPath } from "@/app/util";
 
 type Props = { paths: Directory }
 
@@ -26,7 +26,7 @@ export default function Art( { paths }: Props ) {
 
     }, [paths] )
 
-    const className = "art-panel text-green-500 text-right"
+    const className = artFont.className + " art-panel text-green-500 text-right"
 
     return <div className="relative bg-black/75"><pre className={className}>{art}</pre></div>
 

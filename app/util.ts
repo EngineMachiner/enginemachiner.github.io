@@ -4,6 +4,7 @@ import font from "next/font/local"
 export const titleFont = font( { src: "../fonts/LoftygoalsRegular.otf", preload: false } )
 export const bodyFont = font( { src: "../fonts/NotoSerif-Regular.ttf", preload: false } )
 export const infoFont = font( { src: "../fonts/JetBrainsMono-Medium.ttf", preload: false } )
+export const artFont = font( { src: "../fonts/NotoSansMono-Regular.ttf", preload: false } )
 
 /*
 
