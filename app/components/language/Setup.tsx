@@ -50,7 +50,7 @@ export default function LanguageSetup( { children }: PropsWithChildren ) {
 
     // The extra render is tiny and happens only during initial language detection.
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    useEffect( () => setInitialLocale(), [] )
+    useEffect(setInitialLocale)
 
 
     useEffect( () => {
@@ -65,8 +65,7 @@ export default function LanguageSetup( { children }: PropsWithChildren ) {
 
     useEffect( () => { document.documentElement.lang = locale }, [locale] )
 
-
-    useEffect( () => { document.title = messages["metatitle"] }, [messages] )
+    useEffect( () => { document.title = messages.metatitle }, [messages] )
 
 
     children = <><LanguageSwitcher setLocale={setLocale}/>{children}</>

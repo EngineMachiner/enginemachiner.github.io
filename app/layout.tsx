@@ -16,8 +16,7 @@ import { DEFAULT_LOCALE } from "@/i18n";
 
 export const metadata: Metadata = {
 
-    title: "enginemachiner.github.io",         description: "A personal website made by Manuel P / Engine_Machiner",
-    icons: "/icon.png"
+    icons: "/icon.png",         description: "A personal website made by Manuel P / Engine_Machiner"
 
 }
 
