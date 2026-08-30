@@ -45,7 +45,13 @@ export default function Loading() {
 
     // Intentional client-only initialization to avoid hydration mismatch.
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    useEffect( () => { setSrc( "/" + randomPath(icons) ) }, [icons] );           if ( !src ) return null
+    useEffect( () => { setSrc( "/" + randomPath(icons) ) }, [icons] );
+    
+    const color = "bg-gradient-to-b from-indigo-500 to-red-500"
+
+    let className = "h-dvh flex items-center justify-center " + color;
+
+    if ( !src ) return <div className={ className + " fixed w-full z-30" }/>
 
     const Video = ( 
         <video
@@ -62,9 +68,7 @@ export default function Loading() {
         />
     )
 
-    const color = "bg-gradient-to-b from-indigo-500 to-red-500"
-
-    let className = "h-dvh flex items-center justify-center " + color;        let Element = <div className={className}>{Video}</div>
+    let Element = <div className={className}>{Video}</div>
 
 
     className = "fixed inset-0 z-20"
