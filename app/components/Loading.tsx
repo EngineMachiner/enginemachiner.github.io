@@ -14,7 +14,7 @@ function preload( directory: Directory ): JSX.Element[] {
     
         let path = child.path;            path = sanitizePath(path)
 
-        return child.children ? preload(child) : <Image src={path} key={path} alt="Preloaded Image" fill/>
+        return child.children ? preload(child) : <Image src={path} key={path} alt="Preloaded Image" fill priority/>
 
     } )
 
